@@ -1,5 +1,5 @@
 <template>
-  <div><v-icon>fas fa-lock</v-icon><i class="fas fa-user"></i></div>
+  <div><v-icon>fas fa-facebook-square</v-icon><i class=""></i></div>
   
 </template>
 

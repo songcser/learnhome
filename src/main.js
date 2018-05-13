@@ -3,12 +3,14 @@ import App from './App.vue'
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.css'
 
+import i18n from './i18n'
 import router from './router'
 
 Vue.use(Vuetify)
 
 new Vue({
   el: '#app',
+  i18n,
   router,
   components: { App },
   template: '<App/>'
