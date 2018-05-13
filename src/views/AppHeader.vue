@@ -1,7 +1,7 @@
 <template>
     <div>
-        <v-toolbar color="cyan" dark tabs>
-            <v-toolbar-title>{{$t('name.name')}}</v-toolbar-title>
+        <v-toolbar class="gradient" dark tabs extended>
+            <v-toolbar-title>{{$t('name')}}</v-toolbar-title>
             <v-spacer></v-spacer>
                 <v-menu offset-y>
                     <v-btn slot="activator" icon>
@@ -19,13 +19,13 @@
             <v-btn icon>
                 <v-icon>more_vert</v-icon>
             </v-btn>
-            <v-tabs slot="extension" v-model="tab" color="cyan" align-with-title>
+            <v-tabs slot="extension" class="gradient-back" color="light-blue accent-4" align-with-title>
                 <v-tabs-slider color="yellow"></v-tabs-slider>
                 <v-tab to="home" ripple>
-                    {{$t('home.name')}}
+                    {{$t('home')}}
                 </v-tab>
                 <v-tab to="about" ripple>
-                    {{$t('about.name')}}
+                    {{$t('about')}}
                 </v-tab>
             </v-tabs>
         </v-toolbar>
@@ -37,7 +37,6 @@ export default {
   name: "app-header",
   data() {
     return {
-      tab: null,
       lang: {
           name: "en",
           src: "https://countryflags.io/us/flat/32.png",
@@ -61,8 +60,11 @@ export default {
 };
 </script>
 <style scoped>
-.v-list-tile {
-    height: 28px;
+.gradient {
+    background: linear-gradient(#3f87a6, #f69d3c);
+}
+.gradient-back {
+    background: linear-gradient(#f69d3c, #8BC34A) !important;
 }
 </style>
 

@@ -4,21 +4,18 @@
         <v-content>
             <router-view />
         </v-content>
-        <v-footer>
-            <app-footer />
-        </v-footer>
+        <app-footer />
     </v-app>
 </template>
 
 <script>
-import AppHeader from '@/views/AppHeader'
-import AppFooter from '@/views/AppFooter'
+import AppHeader from "@/views/AppHeader";
+import AppFooter from "@/views/AppFooter";
 export default {
   name: "layout",
   components: {
-      AppHeader,
-      AppFooter
-  },
-  
+    AppHeader,
+    AppFooter
+  }
 };
 </script>
