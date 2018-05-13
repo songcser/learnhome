@@ -12,7 +12,8 @@ module.exports = {
     extensions: ['.js', '.vue'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
-      'public': path.resolve(__dirname, './public')
+      'public': path.resolve(__dirname, './public'),
+      '@': path.resolve(__dirname, './src')
     }
   },
   module: {
@@ -37,7 +38,7 @@ module.exports = {
         exclude: /node_modules/
       },
       {
-        test: /\.(png|jpg|gif|svg)$/,
+        test: /\.(png|jpg|gif|svg|jpeg)$/,
         loader: 'file-loader',
         options: {
           objectAssign: 'Object.assign'

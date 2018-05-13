@@ -1,0 +1,22 @@
+version: '2'
+
+services:
+  web:
+    build: 
+      context: .
+    volumes:
+      - "${PWD}/src:/web/src"
+      - "${PWD}/package.json:/web/package.json"
+      - "${PWD}/webpack.config.js:/web/webpack.config.js"
+    ports:
+      - "8010:8010"
+    environment:
+      HOST: '0.0.0.0'
+      PORT: '8010'
+    networks:
+      - web-network
+    command: ["npm", "run", "dev"]
+
+networks:
+  web-network:
+    driver: bridge
