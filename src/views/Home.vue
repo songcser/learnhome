@@ -3,19 +3,19 @@
         <section>
             <v-parallax :src="bg" height="600">
                 <v-jumbotron>
-                <v-container fill-height>
-                    <v-layout align-content-end=true>
-                        <v-flex class="indigo--text">
-                            <h3 class="display-2">{{$t("intro")}}</h3>
-                            <span class="subheading grey--text">{{$t("mission.text1")}}</span>
-                            <br/>
-                            <span class="subheading grey--text">{{$t("mission.text2")}}</span>
-                            <v-divider class="my-3"></v-divider>
-                            <div class="title mb-3">{{$t("vision.text")}}</div>
-                            <v-btn large color="primary" class="mx-0">{{$t("more")}}</v-btn>
-                        </v-flex>
-                    </v-layout>
-                </v-container>
+                    <v-container fill-height>
+                        <v-layout align-content-end=true>
+                            <v-flex class="indigo--text">
+                                <h3 class="display-2">{{$t("intro")}}</h3>
+                                <span class="subheading grey--text">{{$t("mission.text1")}}</span>
+                                <br/>
+                                <span class="subheading grey--text">{{$t("mission.text2")}}</span>
+                                <v-divider class="my-3"></v-divider>
+                                <div class="title mb-3">{{$t("vision.text")}}</div>
+                                <v-btn large color="primary" class="mx-0">{{$t("more")}}</v-btn>
+                            </v-flex>
+                        </v-layout>
+                    </v-container>
                 </v-jumbotron>
             </v-parallax>
         </section>
@@ -42,28 +42,36 @@
                 <v-layout row wrap>
                     <v-flex d-flex xs12 sm6 md3>
                         <v-card dark class="gradient">
-                            <v-card-media :src="timg1" height="200px" />
+                            <v-card-media class="box-card-image">
+                                <img :src="timg1" />
+                            </v-card-media>
                             <v-card-title primary class="title">{{$t("businessValues.dedication.title")}}</v-card-title>
                             <v-card-text>{{ $t("businessValues.dedication.text") }}</v-card-text>
                         </v-card>
                     </v-flex>
                     <v-flex d-flex xs12 sm6 md3>
                         <v-card dark class="gradient">
-                            <v-card-media :src="timg" height="200px" />
+                            <v-card-media class="box-card-image">
+                                <img :src="timg" />
+                            </v-card-media>
                             <v-card-title primary class="title">{{$t("businessValues.thanksgiving.title")}}</v-card-title>
                             <v-card-text>{{ $t("businessValues.thanksgiving.text") }}</v-card-text>
                         </v-card>
                     </v-flex>
                     <v-flex d-flex xs12 sm6 md3 child-flex>
                         <v-card dark class="gradient">
-                            <v-card-media :src="timg2" height="200px" />
+                            <v-card-media class="box-card-image">
+                                <img :src="timg2" />
+                            </v-card-media>
                             <v-card-title primary class="title">{{$t("businessValues.excellence.title")}}</v-card-title>
-                            <v-card-text >{{ $t("businessValues.excellence.text") }}</v-card-text>
+                            <v-card-text>{{ $t("businessValues.excellence.text") }}</v-card-text>
                         </v-card>
                     </v-flex>
                     <v-flex d-flex xs12 sm6 md3 child-flex>
                         <v-card dark class="gradient">
-                            <v-card-media :src="timg3" height="200px" />
+                            <v-card-media class="box-card-image">
+                                <img :src="timg3" />
+                            </v-card-media>
                             <v-card-title primary class="title">{{$t("businessValues.happyToShare.title")}}</v-card-title>
                             <v-card-text>{{ $t("businessValues.happyToShare.text") }}</v-card-text>
                         </v-card>
@@ -72,7 +80,7 @@
                 </v-layout>
             </v-container>
         </section>
-        <section >
+        <section>
             <v-layout column wrap class="my-5 mb-2" align-center>
                 <v-flex xs12 sm4 class="my-3">
                     <div class="text-xs-center">
@@ -83,8 +91,8 @@
                     <v-container grid-list-xl>
                         <v-layout row wrap align-center>
                             <v-flex xs12 sm6 offset-sm3 md4 offset-md2>
-                                <v-card class="elevation-0 transparent card-height" height="300px" >
-                                    <v-card-text class="text-xs-center" >
+                                <v-card class="elevation-0 transparent card-height" height="300px">
+                                    <v-card-text class="text-xs-center">
                                         <v-icon x-large class="blue--text text--lighten-2">fas fa-balance-scale</v-icon>
                                     </v-card-text>
                                     <v-card-title primary-title class="layout justify-center">
@@ -94,7 +102,7 @@
                                 </v-card>
                             </v-flex>
                             <v-flex xs12 sm6 md4>
-                                <v-card class="elevation-0 transparent card-height" height="300px" >
+                                <v-card class="elevation-0 transparent card-height" height="300px">
                                     <v-card-text class="text-xs-center">
                                         <v-icon x-large class="blue--text text--lighten-2">flash_on</v-icon>
                                     </v-card-text>
@@ -153,10 +161,10 @@ export default {
   data() {
     return {
       bg: bg,
-      timg: require("@/assets/MAT_0587.jpg"),
-      timg1: require("@/assets/MAT_0601.jpg"),
-      timg2: require("@/assets/MAT_1402.jpg"),
-      timg3: require("@/assets/MAT_0945.jpg"),
+      timg: require("@/assets/MAT_0870.jpg"),
+      timg1: require("@/assets/MAT_0878.jpg"),
+      timg2: require("@/assets/MAT_0908.jpg"),
+      timg3: require("@/assets/MAT_1264.jpg"),
       items: [
         {
           src: require("@/assets/MAT_0592.jpg")
@@ -170,19 +178,32 @@ export default {
         {
           src: require("@/assets/MAT_0615.jpg")
         }
-      ],
+      ]
     };
   }
 };
 </script>
-<style scoped>
+<style rel="stylesheet/scss" lang="scss" scoped>
 h3 {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 .gradient {
-    background: linear-gradient(#e66465, #9198e5);
+  background: linear-gradient(#e66465, #9198e5);
 }
 .card-height {
-    height: 300px;
+  height: 300px;
+}
+.box-card-image {
+  position: relative;
+  transition: all 0.2s linear;
+  img {
+    width: 100%;
+    height: 250px;
+    transition: all 0.2s linear;
+    &:hover {
+      transform: scale(1.1, 1.1);
+      filter: contrast(130%);
+    }
+  }
 }
 </style>

@@ -2,7 +2,8 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Layout from "@/layout/index";
 import Home from "@/views/Home";
-import About from "@/views/About"
+import About from "@/views/About";
+import AdvisoryBoard from "@/views/AdvisoryBoard"
 
 Vue.use(VueRouter);
 
@@ -11,15 +12,19 @@ const router = new VueRouter({
     {
       path: "/",
       component: Layout,
-      redirect: 'home',
+      redirect: "home",
       children: [
         {
           path: "home",
           component: Home
         },
         {
-            path: "about",
-            component: About
+          path: "about",
+          component: About
+        },
+        {
+          path: "advisory",
+          component: AdvisoryBoard
         }
       ]
     }

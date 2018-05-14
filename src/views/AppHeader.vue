@@ -3,16 +3,16 @@
         <v-toolbar class="gradient" dark tabs extended>
             <v-toolbar-title>{{$t('name')}}</v-toolbar-title>
             <v-spacer></v-spacer>
-                <v-menu offset-y>
-                    <v-btn slot="activator" icon>
-                        <img :src="lang.src">
-                    </v-btn>
-                    <v-list>
-                        <v-list-tile :avatar=true @click="changeLang">
-                            <img :src="otherLang.src">
-                        </v-list-tile>
-                    </v-list>
-                </v-menu>
+            <v-menu offset-y>
+                <v-btn slot="activator" icon>
+                    <img :src="lang.src">
+                </v-btn>
+                <v-list>
+                    <v-list-tile :avatar=true @click="changeLang">
+                        <img :src="otherLang.src">
+                    </v-list-tile>
+                </v-list>
+            </v-menu>
             <v-btn icon>
                 <v-icon>search</v-icon>
             </v-btn>
@@ -24,10 +24,21 @@
                 <v-tab to="home" ripple>
                     {{$t('home')}}
                 </v-tab>
+                <v-tab ripple>
+                    <v-menu auto :nudge-bottom=30 >
+                        <span slot="activator">{{$t("conference")}}</span>
+                        <v-list>
+                            <v-list-tile to="advisory">
+                                <v-list-tile-sub-title >{{$t("advisoryBoard")}}</v-list-tile-sub-title>
+                            </v-list-tile>
+                        </v-list>
+                    </v-menu>
+                </v-tab>
                 <v-tab to="about" ripple>
                     {{$t('about')}}
                 </v-tab>
             </v-tabs>
+
         </v-toolbar>
     </div>
 </template>
@@ -38,33 +49,38 @@ export default {
   data() {
     return {
       lang: {
-          name: "en",
-          src: "https://countryflags.io/us/flat/32.png",
+        name: "en",
+        src: "https://countryflags.io/us/flat/32.png"
       },
       otherLang: {
-          name: "zh",
-          src: "https://countryflags.io/cn/flat/32.png"
+        name: "zh",
+        src: "https://countryflags.io/cn/flat/32.png"
       }
     };
   },
-  computed: {
-  },
+  computed: {},
   methods: {
     changeLang() {
-        let l = this.lang;
-        this.lang = this.otherLang;
-        this.otherLang = l
-        this.$i18n.locale = this.lang.name
+      let l = this.lang;
+      this.lang = this.otherLang;
+      this.otherLang = l;
+      this.$i18n.locale = this.lang.name;
+    },
+    toAdvisoryBoard () {
+
     }
   }
 };
 </script>
 <style scoped>
 .gradient {
-    background: linear-gradient(#3f87a6, #f69d3c);
+  background: linear-gradient(#80d8ff, #00b0ff, #0091ea);
 }
 .gradient-back {
-    background: linear-gradient(#f69d3c, #8BC34A) !important;
+  background: linear-gradient(#f69d3c, #8bc34a) !important;
+}
+.list {
+    padding: 0;
 }
 </style>
 

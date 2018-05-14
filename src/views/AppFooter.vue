@@ -9,12 +9,12 @@
                 </v-btn>
             </v-card-title>
             <v-card-text class="grey lighten-3">
-                <v-layout column wrap>
-                    <v-flex xs12 sm4 md4 layout column>
+                <v-layout>
+                    <v-flex xs12  >
                         <span class="body-2" v-text="$t('name')"></span>
                         <div>{{$t("fiveo.hope")}}</div>
                     </v-flex>
-                    <v-flex xs12 sm4 md4 layout column>
+                    <v-flex xs12>
                         <span class="body-2">CONTACT</span>
                         <div>
                             <v-icon size="18px" class="mr-3">fas fa-home</v-icon>
@@ -37,7 +37,7 @@
             </v-card-text>
             <v-card-actions class="grey lighten-2 justify-center">
                 &copy;2018 —
-                <strong>Vuetify</strong>
+                <strong>Fiveo</strong>
             </v-card-actions>
         </v-card>
     </v-footer>
