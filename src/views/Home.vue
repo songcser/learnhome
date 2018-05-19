@@ -7,9 +7,9 @@
                         <v-layout align-content-end=true>
                             <v-flex class="indigo--text">
                                 <h3 class="display-2">{{$t("intro")}}</h3>
-                                <span class="subheading grey--text">{{$t("mission.text1")}}</span>
+                                <span class="subheading deep-purple--text">{{$t("mission.text1")}}</span>
                                 <br/>
-                                <span class="subheading grey--text">{{$t("mission.text2")}}</span>
+                                <span class="subheading deep-purple--text">{{$t("mission.text2")}}</span>
                                 <v-divider class="my-3"></v-divider>
                                 <div class="title mb-3">{{$t("vision.text")}}</div>
                                 <v-btn large color="primary" class="mx-0">{{$t("more")}}</v-btn>
@@ -154,7 +154,7 @@
     </v-app>
 </template>
 <script>
-import bg from "@/assets/timg.jpg";
+import bg from "@/assets/123.png";
 import timg from "@/assets/timg.jpg";
 export default {
   name: "home",

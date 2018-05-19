@@ -24,10 +24,13 @@
                 <v-tab to="home" ripple>
                     {{$t('home')}}
                 </v-tab>
-                <v-tab ripple>
-                    <v-menu auto :nudge-bottom=30 >
-                        <span slot="activator">{{$t("conference")}}</span>
+                <v-tab to="events" ripple>
+                    <v-menu >
+                        <span slot="activator" color='light-blue accent-4'>{{$t("conference")}} </span>
                         <v-list>
+                            <v-list-tile to="events">
+                                <v-list-tile-sub-title >{{$t("events")}}</v-list-tile-sub-title>
+                            </v-list-tile>
                             <v-list-tile to="advisory">
                                 <v-list-tile-sub-title >{{$t("advisoryBoard")}}</v-list-tile-sub-title>
                             </v-list-tile>

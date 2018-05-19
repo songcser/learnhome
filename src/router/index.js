@@ -3,7 +3,8 @@ import VueRouter from "vue-router";
 import Layout from "@/layout/index";
 import Home from "@/views/Home";
 import About from "@/views/About";
-import AdvisoryBoard from "@/views/AdvisoryBoard"
+import AdvisoryBoard from "@/views/AdvisoryBoard";
+import Events from "@/views/Events";
 
 Vue.use(VueRouter);
 
@@ -25,6 +26,10 @@ const router = new VueRouter({
         {
           path: "advisory",
           component: AdvisoryBoard
+        },
+        {
+          path: "events",
+          component: Events
         }
       ]
     }
