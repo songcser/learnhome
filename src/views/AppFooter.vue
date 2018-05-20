@@ -9,12 +9,13 @@
                 </v-btn>
             </v-card-title>
             <v-card-text class="grey lighten-3">
-                <v-layout>
-                    <v-flex xs12  >
+                <v-container fluid grid-list-md>
+                <v-layout  row wrap>
+                    <v-flex xs12  md6>
                         <span class="body-2" v-text="$t('name')"></span>
                         <div>{{$t("fiveo.hope")}}</div>
                     </v-flex>
-                    <v-flex xs12>
+                    <v-flex xs12 md6>
                         <span class="body-2">CONTACT</span>
                         <div>
                             <v-icon size="18px" class="mr-3">fas fa-home</v-icon>
@@ -34,6 +35,7 @@
                         </div>
                     </v-flex>
                 </v-layout>
+                </v-container>
             </v-card-text>
             <v-card-actions class="grey lighten-2 justify-center">
                 &copy;2018 —

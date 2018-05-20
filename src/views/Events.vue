@@ -3,9 +3,10 @@
         style="min-height: 0;"
         grid-list-lg
       >
+      <h1>{{$t("events")}}</h1>
     <v-layout row wrap>
         <v-flex xs12 sm6>
-            <v-card color="blue-grey darken-2" class="white--text">
+            <v-card color="blue-grey darken-2" class="white--text elevation-12" v-ripple>
               <v-container fluid grid-list-lg>
                 <v-layout row>
                   <v-flex xs7>
@@ -26,7 +27,7 @@
             </v-card>
         </v-flex>
         <v-flex xs12 sm6>
-            <v-card color="cyan darken-2" class="white--text">
+            <v-card color="cyan darken-2" class="white--text elevation-12" v-ripple>
               <v-container fluid grid-list-lg>
                 <v-layout row>
                   <v-flex xs7>
@@ -47,7 +48,7 @@
             </v-card>
         </v-flex>
         <v-flex xs12 sm6>
-            <v-card color="deep-purple darken-2" class="white--text">
+            <v-card color="deep-purple darken-2" class="white--text elevation-12" v-ripple>
               <v-container fluid grid-list-lg>
                 <v-layout row>
                   <v-flex xs7>
@@ -68,7 +69,7 @@
             </v-card>
         </v-flex>
         <v-flex xs12 sm6>
-            <v-card color="blue-grey darken-2" class="white--text">
+            <v-card color="blue-grey darken-2" class="white--text elevation-12" v-ripple>
               <v-container fluid grid-list-lg>
                 <v-layout row>
                   <v-flex xs7>
@@ -89,7 +90,7 @@
             </v-card>
         </v-flex>
         <v-flex xs12 sm6>
-            <v-card color="cyan darken-2" class="white--text">
+            <v-card color="cyan darken-2" class="white--text elevation-12" v-ripple>
               <v-container fluid grid-list-lg>
                 <v-layout row>
                   <v-flex xs7>
@@ -110,7 +111,7 @@
             </v-card>
         </v-flex>
         <v-flex xs12 sm6 >
-            <v-card color="deep-purple darken-2" class="white--text">
+            <v-card color="deep-purple darken-2" class="white--text elevation-12" v-ripple>
               <v-container fluid grid-list-lg>
                 <v-layout row>
                   <v-flex xs7>

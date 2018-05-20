@@ -12,7 +12,7 @@
                                 <span class="subheading deep-purple--text">{{$t("mission.text2")}}</span>
                                 <v-divider class="my-3"></v-divider>
                                 <div class="title mb-3">{{$t("vision.text")}}</div>
-                                <v-btn large color="primary" class="mx-0">{{$t("more")}}</v-btn>
+                                <v-btn large color="primary" to="events" class="mx-0">{{$t("more")}}</v-btn>
                             </v-flex>
                         </v-layout>
                     </v-container>

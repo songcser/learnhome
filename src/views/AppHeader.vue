@@ -25,7 +25,7 @@
                     {{$t('home')}}
                 </v-tab>
                 <v-tab to="events" ripple>
-                    <v-menu >
+                    <v-menu nudge-left=13>
                         <span slot="activator" color='light-blue accent-4'>{{$t("conference")}} </span>
                         <v-list>
                             <v-list-tile to="events">
