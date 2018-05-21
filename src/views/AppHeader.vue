@@ -25,7 +25,11 @@
                     {{$t('home')}}
                 </v-tab>
                 <v-tab to="events" ripple>
-                    <v-menu nudge-left=13>
+                    {{$t('events')}}
+                </v-tab>
+                <v-tab to="advisory" ripple>
+                    {{$t("advisoryBoard")}}
+                    <!-- <v-menu nudge-left=13>
                         <span slot="activator" color='light-blue accent-4'>{{$t("conference")}} </span>
                         <v-list>
                             <v-list-tile to="events">
@@ -35,7 +39,7 @@
                                 <v-list-tile-sub-title >{{$t("advisoryBoard")}}</v-list-tile-sub-title>
                             </v-list-tile>
                         </v-list>
-                    </v-menu>
+                    </v-menu> -->
                 </v-tab>
                 <v-tab to="about" ripple>
                     {{$t('about')}}
@@ -52,12 +56,12 @@ export default {
   data() {
     return {
       lang: {
-        name: "en",
-        src: "https://countryflags.io/us/flat/32.png"
-      },
-      otherLang: {
         name: "zh",
         src: "https://countryflags.io/cn/flat/32.png"
+      },
+      otherLang: {
+        name: "en",
+        src: "https://countryflags.io/us/flat/32.png"
       }
     };
   },
