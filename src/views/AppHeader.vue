@@ -19,7 +19,7 @@
             <v-btn icon>
                 <v-icon>more_vert</v-icon>
             </v-btn>
-            <v-tabs slot="extension" class="gradient-back" color="light-blue accent-4" align-with-title>
+            <v-tabs slot="extension" color="light-blue accent-4" align-with-title>
                 <v-tabs-slider color="yellow"></v-tabs-slider>
                 <v-tab to="home" ripple>
                     {{$t('home')}}

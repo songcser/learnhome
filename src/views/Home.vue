@@ -5,11 +5,11 @@
                 <v-jumbotron>
                     <v-container fill-height>
                         <v-layout align-content-end=true>
-                            <v-flex class="indigo--text">
-                                <h3 class="display-2">{{$t("intro")}}</h3>
-                                <span class="subheading deep-purple--text">{{$t("mission.text1")}}</span>
+                            <v-flex class="purple--text">
+                                <h3 :class="infroClass">{{$t("intro")}}</h3>
+                                <span class="subheading purple--text">{{$t("mission.text1")}}</span>
                                 <br/>
-                                <span class="subheading deep-purple--text">{{$t("mission.text2")}}</span>
+                                <span class="subheading purple--text">{{$t("mission.text2")}}</span>
                                 <v-divider class="my-3"></v-divider>
                                 <div class="title mb-3">{{$t("vision.text")}}</div>
                                 <v-btn large color="primary" to="events" class="mx-0">{{$t("more")}}</v-btn>
@@ -23,6 +23,9 @@
             <v-layout row wrap>
                 <v-flex d-flex xs12 sm4 md4>
                     <v-card dark class="gradient">
+                        <v-card-media class="box-card-image">
+                                <img :src="time4" />
+                            </v-card-media>
                         <v-card-title primary class="title mb-4">{{$t("businessValues.title")}}</v-card-title>
                         <v-card-text>
                             <h3 class="mb-2">{{$t("businessValues.honestyIntegrity.title")}}</h3>
@@ -42,7 +45,7 @@
                 <v-layout row wrap>
                     <v-flex d-flex xs12 sm6 md3>
                         <v-card dark class="gradient">
-                            <v-card-media class="box-card-image">
+                            <v-card-media class="box-card-image" height=200>
                                 <img :src="timg1" />
                             </v-card-media>
                             <v-card-title primary class="title">{{$t("businessValues.dedication.title")}}</v-card-title>
@@ -51,7 +54,7 @@
                     </v-flex>
                     <v-flex d-flex xs12 sm6 md3>
                         <v-card dark class="gradient">
-                            <v-card-media class="box-card-image">
+                            <v-card-media class="box-card-image" height=200>
                                 <img :src="timg" />
                             </v-card-media>
                             <v-card-title primary class="title">{{$t("businessValues.thanksgiving.title")}}</v-card-title>
@@ -60,7 +63,7 @@
                     </v-flex>
                     <v-flex d-flex xs12 sm6 md3 child-flex>
                         <v-card dark class="gradient">
-                            <v-card-media class="box-card-image">
+                            <v-card-media class="box-card-image" height=200>
                                 <img :src="timg2" />
                             </v-card-media>
                             <v-card-title primary class="title">{{$t("businessValues.excellence.title")}}</v-card-title>
@@ -69,7 +72,7 @@
                     </v-flex>
                     <v-flex d-flex xs12 sm6 md3 child-flex>
                         <v-card dark class="gradient">
-                            <v-card-media class="box-card-image">
+                            <v-card-media class="box-card-image" height=200>
                                 <img :src="timg3" />
                             </v-card-media>
                             <v-card-title primary class="title">{{$t("businessValues.happyToShare.title")}}</v-card-title>
@@ -154,7 +157,7 @@
     </v-app>
 </template>
 <script>
-import bg from "@/assets/123.png";
+import bg from "@/assets/123.jpg";
 import timg from "@/assets/timg.jpg";
 export default {
   name: "home",
@@ -165,6 +168,7 @@ export default {
       timg1: require("@/assets/MAT_0878.jpg"),
       timg2: require("@/assets/MAT_0908.jpg"),
       timg3: require("@/assets/MAT_1264.jpg"),
+      time4: require("@/assets/941.jpg"),
       items: [
         {
           src: require("@/assets/MAT_0592.jpg")
@@ -180,6 +184,20 @@ export default {
         }
       ]
     };
+  },
+  mounted () {
+      console.log(this.$vuetify.breakpoint)
+  },
+  computed: {
+      infroClass () {
+       switch (this.$vuetify.breakpoint.name) {
+         case 'xs': return 'display-1'
+         case 'sm': return 'display-1'
+         case 'md': return 'display-2'
+         case 'lg': return 'display-2'
+         case 'xl': return 'display-3'
+       }
+     }
   }
 };
 </script>

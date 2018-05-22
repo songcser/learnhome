@@ -1,5 +1,5 @@
 export default {
-    name: "五鸥",
+    name: "FIVEO GROUP",
     home: "首页",
     conference: "会议",
     about: "关于我们",

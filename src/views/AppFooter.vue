@@ -2,18 +2,18 @@
     <v-footer height="auto">
         <v-card flat tile class="flex">
             <v-card-title class="teal white--text">
-                <strong class="subheading">{{$t("connection")}}</strong>
+                <!-- <strong class="subheading">{{$t("connection")}}</strong>
                 <v-spacer></v-spacer>
                 <v-btn v-for="icon in icons" :key="icon" icon dark class="mx-3">
                     <v-icon size="24px">{{ icon }}</v-icon>
-                </v-btn>
+                </v-btn> -->
             </v-card-title>
             <v-card-text class="grey lighten-3">
                 <v-container fluid grid-list-md>
                 <v-layout  row wrap>
                     <v-flex xs12  md6>
                         <span class="body-2" v-text="$t('name')"></span>
-                        <div>{{$t("fiveo.hope")}}</div>
+                        <!-- <div>{{$t("fiveo.hope")}}</div> -->
                     </v-flex>
                     <v-flex xs12 md6>
                         <span class="body-2">CONTACT</span>
