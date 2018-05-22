@@ -1,15 +1,16 @@
 <template>
     <section>
     <v-jumbotron :src="bg" height=900 :gradient="gradient">
-        <v-container color="grey lighten-2">
+        <v-container>
             <v-layout >
                 <v-flex>
-                    <h3 class="display-2 mt-5 white--text">{{$t("name")}}</h3>
-                    <span class="subheading white--text" >{{$t("fiveo.intro")}}</span>
+                    <h3 class="display-2 mt-5">{{$t("name")}}</h3>
                     <v-divider class="my-3"></v-divider>
-                    <span class="subheading white--text" >{{$t("fiveo.service")}}</span>
+                    <span class="subheading" >{{$t("fiveo.intro")}}</span>
                     <v-divider class="my-3"></v-divider>
-                    <span class="subheading white--text" >{{$t("fiveo.hope")}}</span>
+                    <span class="subheading" >{{$t("fiveo.service")}}</span>
+                    <v-divider class="my-3"></v-divider>
+                    <span class="subheading" >{{$t("fiveo.hope")}}</span>
                 </v-flex>
             </v-layout>
         </v-container>
@@ -30,4 +31,9 @@ export default {
 };
 </script>
 
+<style scoped>
+h3, span {
+    color: #E0E0E0
+}
+</style>
 
