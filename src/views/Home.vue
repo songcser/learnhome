@@ -5,11 +5,11 @@
                 <v-jumbotron>
                     <v-container fill-height>
                         <v-layout align-content-end=true>
-                            <v-flex class="purple--text">
+                            <v-flex class="black--text">
                                 <h3 :class="infroClass">{{$t("intro")}}</h3>
-                                <span class="subheading purple--text">{{$t("mission.text1")}}</span>
+                                <span class="subheading grey-darken-2--text">{{$t("mission.text1")}}</span>
                                 <br/>
-                                <span class="subheading purple--text">{{$t("mission.text2")}}</span>
+                                <span class="subheading grey-darken-2--text">{{$t("mission.text2")}}</span>
                                 <v-divider class="my-3"></v-divider>
                                 <div class="title mb-3">{{$t("vision.text")}}</div>
                                 <v-btn large color="primary" to="events" class="mx-0">{{$t("more")}}</v-btn>
