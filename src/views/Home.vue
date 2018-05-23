@@ -5,7 +5,7 @@
                 <v-jumbotron>
                     <v-container fill-height>
                         <v-layout align-content-end=true>
-                            <v-flex class="black--text">
+                            <v-flex class="white--text">
                                 <h3 :class="infroClass">{{$t("intro")}}</h3>
                                 <span class="subheading grey-darken-2--text">{{$t("mission.text1")}}</span>
                                 <br/>
@@ -157,7 +157,7 @@
     </v-app>
 </template>
 <script>
-import bg from "@/assets/123.jpg";
+import bg from "@/assets/f43d.jpg";
 import timg from "@/assets/timg.jpg";
 export default {
   name: "home",
