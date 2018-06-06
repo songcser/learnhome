@@ -11,6 +11,14 @@ export default {
     email: "user@fiveo.com",
     advisoryBoard: "Advisory Board",
     events: "Events",
+    participant: "Participant",
+    oem: "OEM and Engine",
+    registration: "Registration",
+    whyRegistration: "Why Registration",
+    register: "Register",
+    sponsorship: "Sponsorship",
+    whySponsorship: "Why Sponsorship",
+    sponsorshipOpportunity: "Sponsorship Opportunity",
     fiveo: {
         intro: "FIVEO stands for Forever Innovative and Valuable Event Organizer. WuOu, the Chinese name of FIVEO means five gulls in English. Five gulls indicates that we must have at least 5 startup partners. It also highlights our company's philosophy and determination for the new business partner mechanism. Through innovative perspectives, FIVEO is committed to continuously delivering professional conference & products and services matched focus on huge potential markets in the world to leading companies that are keen to expand their local market and enter the global market.",
         service: "FIVEO has established and maintained strong and powerful contacts with government agencies, numerous leading enterprises and brands, well-known associations, academic institutions etc. Whether it is getting the latest policies from local authorities, expanding networks, displaying the cutting-edge products or leading the industry in technological innovation, FIVEO does its best to serve you. By organizing summits, forums and seminars, our team are always dedicated to fully exchange opinions on the latest market hot topics, cutting-edge technology innovation together with the most customized events with all the keynote speakers, sponsors, delegates and experts. Thus eventually clients from different regions and industries worldwide can get the chance to solve the problems and difficulties encountered in actual operation.",
@@ -71,5 +79,5 @@ export default {
             text: "For those who are virtuous and talented shall be given top priority; for those who are virtuous but not talented shall be appropriately trained; for those who are talented but not virtuous shall be restricted for use; for those who are neither virtuous nor talented shall never be on board. Talent is the only capital in FIVEO."
         }
     }
-    
+
 }

@@ -5,6 +5,8 @@ import Home from "@/views/Home";
 import About from "@/views/About";
 import AdvisoryBoard from "@/views/AdvisoryBoard";
 import Events from "@/views/Events";
+import MeetingLayout from "@/layout/meeting/index";
+import MeetingHome from "@/views/meetings/Home"
 
 Vue.use(VueRouter);
 
@@ -31,7 +33,16 @@ const router = new VueRouter({
           path: "events",
           component: Events
         }
-      ]
+      ],
+    },{
+        path: "/meeting",
+        component: MeetingLayout,
+        children: [
+            {
+                path: "home",
+                component: MeetingHome
+            }
+        ]
     }
   ]
 });

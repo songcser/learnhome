@@ -206,7 +206,7 @@ h3 {
   margin-bottom: 20px;
 }
 .gradient {
-  background: linear-gradient(#e66465, #9198e5);
+  background: linear-gradient(#E1F5FE, #0091EA);
 }
 .card-height {
   height: 300px;

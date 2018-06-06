@@ -11,6 +11,14 @@ export default {
     email: "user@fiveo.com",
     advisoryBoard: "专家顾问团",
     events: "热门会议",
+    participant: "谁会参加",
+    oem: "OEM和发动机专区",
+    registration: "我要参会",
+    whyRegistration: "为什么参加",
+    register: "注册报名",
+    sponsorship: "我要赞助",
+    whySponsorship: "为什么赞助",
+    sponsorshipOpportunity: "赞助机会",
     fiveo: {
         intro: "五鸥（FIVEO）是Forever Innovative and Valuable Event Organizer（永远创新和有价值的会议活动组织者）的音译简称。五鸥，五只鸥鸟，寓意我司至少有五位合伙人，更彰显我司坚持新型的事业合伙人制度的理念和决心。FIVEO团队致力于透过创新视角，为意图进入和扩大本土及国外市场的领先企业不断提供在全球有巨大潜力市场的专业会议及相关产品和服务。",
         service: "FIVEO与政府机关，众多强势的领先品牌企业，知名的协会，学术机构等建立和保持了强而有力的联系。无论是获取当地政府最新政策，拓展人脉，展示尖端科技产品还是引领行业技术创新，FIVEO都竭尽所能为您服务。通过举办高峰论坛，峰会和研讨会等形式，我们的团队自始至终专注于和所有主旨演讲嘉宾，赞助商，参会代表与专家就最新市场热点话题，最前沿行业技术革新及最定制化的活动形式充分交换意见，最终让来自全球不同地区和行业的合作伙伴能得到解决实际经营中遇到的问题和困难的机会。",
@@ -70,5 +78,5 @@ export default {
             text: "有德有才，破格使用；有德无才，培养使用；有才无德，限制使用；无才无德，坚决不用。人才是FIVEO的唯一资本！"
         }
     }
-    
+
 }

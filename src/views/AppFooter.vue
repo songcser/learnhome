@@ -8,7 +8,7 @@
                     <v-icon size="24px">{{ icon }}</v-icon>
                 </v-btn>
             </v-card-title> -->
-            <v-card-text class="white lighten-3">
+            <v-card-text class="light-blue accent-3">
                 <v-container fluid grid-list-md>
                 <v-layout  row wrap>
                     <v-flex xs12  md4>
@@ -37,7 +37,7 @@
                     <v-flex xs12 md4>
                         <span class="body-2">CONTACT</span>
                         <div>
-                            <v-icon size="18px" class="mr-3">fab fa-wechat</v-icon>
+                            <v-icon size="18px" class="mr-3">fab fa-facebook</v-icon>
                             facebook
                         </div>
                         <div>
@@ -56,7 +56,7 @@
                 </v-layout>
                 </v-container>
             </v-card-text>
-            <v-card-actions class="grey lighten-2 justify-center">
+            <v-card-actions class="light-blue lighten-4 justify-center">
                 &copy;2018 —
                 <strong>Fiveo</strong>
             </v-card-actions>
