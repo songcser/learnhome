@@ -1,7 +1,7 @@
 <template>
   <v-footer height="auto">
     <v-card flat tile class="flex">
-      <v-card-text class="light-blue accent-4 white--text">
+      <v-card-text class="purple white--text">
         <v-container fluid grid-list-md>
           <v-layout row wrap>
             <v-flex xs12 md6>

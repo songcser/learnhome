@@ -1,7 +1,6 @@
 <template>
   <v-app>
     <app-header />
-    <div>ddddd</div>
     <v-content>
       <router-view />
     </v-content>
@@ -12,7 +11,6 @@
 <script>
 import AppHeader from "@/views/meetings/AppHeader";
 import AppFooter from "@/views/meetings/AppFooter";
-console.log("ffff");
 export default {
   name: "layout",
   components: {

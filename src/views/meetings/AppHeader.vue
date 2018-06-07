@@ -18,7 +18,7 @@
     <v-btn icon>
       <v-icon>more_vert</v-icon>
     </v-btn>
-    <v-tabs slot="extension" color="light-blue accent-4" align-with-title>
+    <v-tabs slot="extension" color="purple" align-with-title>
       <v-tabs-slider color="yellow"></v-tabs-slider>
       <v-tab to="/meeting/home" ripple>
         {{$t('home')}}
@@ -91,7 +91,7 @@ export default {
 </script>
 <style scoped>
 .gradient {
-  background: linear-gradient(#80d8ff, #00b0ff, #0091ea);
+  background: linear-gradient(#80d8ff, purple);
 }
 .gradient-back {
   background: linear-gradient(#f69d3c, #8bc34a) !important;
