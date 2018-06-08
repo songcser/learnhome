@@ -73,14 +73,35 @@
             </template>
           </v-list>
         </v-flex>
+        <v-flex xs12 sm4>
+          <v-card elevation-24>
+            <v-card-media height="200px">
+              <v-progress-circular :size="200" :width="25" :rotate="-90" :value="timestart" color="primary">
+                {{ timetext }}
+              </v-progress-circular>
+            </v-card-media>
+            <v-card-title primary-title>
+              <vue-seamless-scroll :data="listData" class="seamless-warp">
+                <ul class="item">
+                  <li v-for="(item, index) in listData" :key="index">
+                    <img :src="item.src" height="50px" />
+                  </li>
+                </ul>
+              </vue-seamless-scroll>
+            </v-card-title>
+          </v-card>
+        </v-flex>
       </v-layout>
     </v-container>
   </section>
 </template>
 <script>
-console.log("dddd");
+import VueSeamlessScroll from "vue-seamless-scroll";
 export default {
   name: "home",
+  components: {
+    VueSeamlessScroll
+  },
   data() {
     return {
       items: [
@@ -119,8 +140,115 @@ export default {
       ],
       beiying1: require("@/assets/5a02.jpg"),
       beiying2: require("@/assets/a75d.jpg"),
-      beiying3: require("@/assets/w640.jpg")
+      beiying3: require("@/assets/w640.jpg"),
+      timestart: 0,
+      timetext: "倒计时",
+      listData: [
+        {
+          title: "无缝滚动第一行无缝滚动第一行",
+          src: require("@/assets/logo/360che.jpg")
+        },
+        {
+          title: "无缝滚动第二行无缝滚动第二行",
+          src: require("@/assets/logo/cehome.png")
+        },
+        {
+          title: "无缝滚动第三行无缝滚动第三行",
+          src: require("@/assets/logo/chinatruck.jpg")
+        },
+        {
+          title: "无缝滚动第四行无缝滚动第四行",
+          src: require("@/assets/logo/cmsino.jpg")
+        },
+        {
+          title: "无缝滚动第五行无缝滚动第五行",
+          src: require("@/assets/logo/cmtoday.png")
+        },
+        {
+          title: "无缝滚动第六行无缝滚动第六行",
+          src: require("@/assets/logo/cn357.png")
+        },
+        {
+          title: "无缝滚动第七行无缝滚动第七行",
+          src: require("@/assets/logo/cvnews.png")
+        },
+        {
+          title: "无缝滚动第九行无缝滚动第九行",
+          src: require("@/assets/logo/dieselprogress.png")
+        },
+        {
+          title: "无缝滚动第九行无缝滚动第九行",
+          src: require("@/assets/logo/fuelsmarketnews.png")
+        },
+        {
+          title: "无缝滚动第九行无缝滚动第九行",
+          src: require("@/assets/logo/hc360.jpg")
+        },
+        {
+          title: "无缝滚动第九行无缝滚动第九行",
+          src: require("@/assets/logo/lmjx.png")
+        },
+        {
+          title: "无缝滚动第九行无缝滚动第九行",
+          src: require("@/assets/logo/cvworld.png")
+        },
+        {
+          title: "无缝滚动第九行无缝滚动第九行",
+          src: require("@/assets/logo/lubecn.gif")
+        },
+        {
+          title: "无缝滚动第九行无缝滚动第九行",
+          src: require("@/assets/logo/nongji360.jpg")
+        },
+        {
+          title: "无缝滚动第九行无缝滚动第九行",
+          src: require("@/assets/logo/nongji1688.png")
+        },
+        {
+          title: "无缝滚动第九行无缝滚动第九行",
+          src: require("@/assets/logo/nongjitong.png")
+        },
+        {
+          title: "无缝滚动第九行无缝滚动第九行",
+          src: require("@/assets/logo/nongjx.png")
+        },
+        {
+          title: "无缝滚动第九行无缝滚动第九行",
+          src: require("@/assets/logo/oemoffhighway.png")
+        },
+        {
+          title: "无缝滚动第九行无缝滚动第九行",
+          src: require("@/assets/logo/oosyoo.jpg")
+        },
+        {
+          title: "无缝滚动第九行无缝滚动第九行",
+          src: require("@/assets/logo/qq.jpg")
+        },
+        {
+          title: "无缝滚动第九行无缝滚动第九行",
+          src: require("@/assets/logo/sinofarm.gif")
+        },
+        {
+          title: "无缝滚动第九行无缝滚动第九行",
+          src: require("@/assets/logo/sohu.png")
+        },
+        {
+          title: "无缝滚动第九行无缝滚动第九行",
+          src: require("@/assets/logo/wangyi.jpg")
+        },
+      ]
     };
+  },
+  beforeDestroy() {
+    clearInterval(this.interval);
+  },
+  mounted() {
+    this.interval = setInterval(() => {
+      if (this.timestart >= 100) {
+        return (this.timestart = 0);
+      }
+      this.timestart += 1.67;
+    }, 1000);
   }
 };
 </script>
@@ -130,6 +258,7 @@ export default {
 }
 .list {
   background: none;
+  border-right: 3px solid grey;
 }
 .listcontent {
   transition: transform 0.4s linear;
@@ -141,5 +270,16 @@ export default {
   -webkit-transform: translateX(10px);
   -o-transform: translateX(10px);
   -ms-transform: translateX(10px);
+}
+.progress-circular {
+  margin: auto;
+}
+.card {
+  background: none;
+  box-shadow: none;
+}
+.seamless-warp {
+  height: 800px;
+  overflow: hidden;
 }
 </style>
