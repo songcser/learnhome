@@ -6,7 +6,10 @@ import About from "@/views/About";
 import AdvisoryBoard from "@/views/AdvisoryBoard";
 import Events from "@/views/Events";
 import MeetingLayout from "@/layout/meeting/index";
-import MeetingHome from "@/views/meetings/Home"
+import MeetingHome from "@/views/meetings/Home";
+import MeetingParticipant from "@/views/meetings/Participant"
+import MeetingRegistration from "@/views/meetings/Registration"
+import MeetingRegister from "@/views/meetings/Register"
 
 Vue.use(VueRouter);
 
@@ -41,6 +44,18 @@ const router = new VueRouter({
             {
                 path: "home",
                 component: MeetingHome
+            },
+            {
+              path: "participant",
+              component: MeetingParticipant
+            },
+            {
+              path: 'registration',
+              component: MeetingRegistration
+            },
+            {
+              path: 'register',
+              component: MeetingRegister
             }
         ]
     }

@@ -1,14 +1,14 @@
 <template>
   <v-footer height="auto">
     <v-card flat tile class="flex">
-      <v-card-text class="purple white--text">
+      <v-card-text class="deep-purple white--text">
         <v-container fluid grid-list-md>
           <v-layout row wrap>
-            <v-flex xs12 md6>
+            <v-flex xs12 sm6 md6>
               <h3>The official website of 2014中国国际汽车发动机峰会</h3>
               <span>Borscon Group reserves the right to change the venue and content of the event should circumstances require (Best viewed at 1024 X 768,IE 7.0)</span>
             </v-flex>
-            <v-flex xs12 md6>
+            <v-flex xs12 sm6 md6>
               <div>
                 <v-icon size="18px" class="mr-3">fas fa-home</v-icon>
                 {{$t("address")}}
@@ -29,7 +29,7 @@
           </v-layout>
         </v-container>
       </v-card-text>
-      <v-card-actions class="light-blue lighten-4 justify-center">
+      <v-card-actions class="purple justify-center">
         &copy;2018 —
         <strong>Fiveo</strong>
       </v-card-actions>

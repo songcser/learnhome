@@ -1,5 +1,5 @@
 <template>
-  <v-toolbar class="gradient" dark tabs extended>
+  <v-toolbar color="deep-purple" dark tabs extended>
     <v-toolbar-title>{{$t('name')}}</v-toolbar-title>
     <v-spacer></v-spacer>
     <v-menu offset-y>
@@ -18,32 +18,32 @@
     <v-btn icon>
       <v-icon>more_vert</v-icon>
     </v-btn>
-    <v-tabs slot="extension" color="purple" align-with-title>
+    <v-tabs slot="extension" color="deep-purple" align-with-title>
       <v-tabs-slider color="yellow"></v-tabs-slider>
       <v-tab to="/meeting/home" ripple>
         {{$t('home')}}
       </v-tab>
-      <v-tab ripple>
+      <v-tab to="/meeting/participant" ripple>
         {{$t('participant')}}
       </v-tab>
       <v-tab ripple>
         {{$t("oem")}}
       </v-tab>
-      <v-tab ripple>
-        <v-menu offset-y :nudge-bottom="12" :nudge-left="12">
+      <v-tab to="registration" ripple>
+        <v-menu offset-y :nudge-bottom="12" :nudge-left="12" open-on-hover>
           <div class="menu-btn" slot="activator" color='light-blue accent-4'>{{$t("registration")}} </div>
           <v-list>
-            <v-list-tile>
+            <v-list-tile to="registration">
               <v-list-tile-sub-title>{{$t("whyRegistration")}}</v-list-tile-sub-title>
             </v-list-tile>
-            <v-list-tile >
+            <v-list-tile to="register">
               <v-list-tile-sub-title>{{$t("register")}}</v-list-tile-sub-title>
             </v-list-tile>
           </v-list>
         </v-menu>
       </v-tab>
       <v-tab ripple>
-         <v-menu offset-y :nudge-bottom="12" :nudge-left="12">
+         <v-menu offset-y :nudge-bottom="12" :nudge-left="12" open-on-hover>
           <div slot="activator" color='light-blue accent-4'>{{$t("sponsorship")}} </div>
           <v-list>
             <v-list-tile>

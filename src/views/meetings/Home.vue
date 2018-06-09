@@ -81,10 +81,11 @@
               </v-progress-circular>
             </v-card-media>
             <v-card-title primary-title>
+              <h3 class="headline mb-3">赞助商</h3>
               <vue-seamless-scroll :data="listData" class="seamless-warp">
-                <ul class="item">
-                  <li v-for="(item, index) in listData" :key="index">
-                    <img :src="item.src" height="50px" />
+                <ul>
+                  <li class="item" v-for="(item, index) in listData" :key="index">
+                    <img class="center" :src="item.src" height="50px" />
                   </li>
                 </ul>
               </vue-seamless-scroll>
@@ -252,7 +253,8 @@ export default {
   }
 };
 </script>
-<style scoped>
+
+<style lang="scss" scoped>
 .headline {
   margin-top: 20px;
 }
@@ -279,7 +281,16 @@ export default {
   box-shadow: none;
 }
 .seamless-warp {
-  height: 800px;
+  height: 700px;
   overflow: hidden;
+}
+.center {
+  width: 80%;
+}
+.item {
+  width: 100%;
+  margin: 10px;
+  border-bottom: 1px solid grey;
+  text-align: center;
 }
 </style>
