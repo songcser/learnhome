@@ -1,7 +1,7 @@
 <template>
-  <v-footer height="auto">
+  <v-footer dark height="auto">
     <v-card flat tile class="flex">
-      <v-card-text class="deep-purple white--text">
+      <v-card-text class="white--text">
         <v-container fluid grid-list-md>
           <v-layout row wrap>
             <v-flex xs12 sm6 md6>
@@ -29,7 +29,7 @@
           </v-layout>
         </v-container>
       </v-card-text>
-      <v-card-actions class="purple justify-center">
+      <v-card-actions class="grey darken-2 justify-center">
         &copy;2018 —
         <strong>Fiveo</strong>
       </v-card-actions>

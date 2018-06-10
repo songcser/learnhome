@@ -10,6 +10,10 @@ import MeetingHome from "@/views/meetings/Home";
 import MeetingParticipant from "@/views/meetings/Participant"
 import MeetingRegistration from "@/views/meetings/Registration"
 import MeetingRegister from "@/views/meetings/Register"
+import MeetingSponsorship from "@/views/meetings/Sponsorship"
+import MeetingSponsorshipOpportunity from "@/views/meetings/SponsorshipOpportunity"
+import MeetingFdes from "@/views/meetings/Fdes"
+import MeetingAssociatedMedia from "@/views/meetings/AssociatedMedia"
 
 Vue.use(VueRouter);
 
@@ -56,6 +60,22 @@ const router = new VueRouter({
             {
               path: 'register',
               component: MeetingRegister
+            },
+            {
+              path: 'sponsorship',
+              component: MeetingSponsorship
+            },
+            {
+              path: 'sponsorship-opportunity',
+              component: MeetingSponsorshipOpportunity
+            },
+            {
+              path: 'fdes',
+              component: MeetingFdes
+            },
+            {
+              path: 'associated-media',
+              component: MeetingAssociatedMedia
             }
         ]
     }

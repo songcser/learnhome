@@ -113,7 +113,7 @@ export default {
           src: require("@/assets/c427c.jpg")
         },
         {
-          src: require("@/assets/69a4.jpg")
+          src: require("@/assets/54c2.jpg")
         }
       ],
       liangdians: [

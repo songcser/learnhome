@@ -1,5 +1,5 @@
 <template>
-  <v-toolbar color="deep-purple" dark tabs extended>
+  <v-toolbar dark tabs extended>
     <v-toolbar-title>{{$t('name')}}</v-toolbar-title>
     <v-spacer></v-spacer>
     <v-menu offset-y>
@@ -18,7 +18,7 @@
     <v-btn icon>
       <v-icon>more_vert</v-icon>
     </v-btn>
-    <v-tabs slot="extension" color="deep-purple" align-with-title>
+    <v-tabs slot="extension" dark align-with-title>
       <v-tabs-slider color="yellow"></v-tabs-slider>
       <v-tab to="/meeting/home" ripple>
         {{$t('home')}}
@@ -46,17 +46,27 @@
          <v-menu offset-y :nudge-bottom="12" :nudge-left="12" open-on-hover>
           <div slot="activator" color='light-blue accent-4'>{{$t("sponsorship")}} </div>
           <v-list>
-            <v-list-tile>
+            <v-list-tile to="sponsorship">
               <v-list-tile-sub-title>{{$t("whySponsorship")}}</v-list-tile-sub-title>
             </v-list-tile>
-            <v-list-tile >
+            <v-list-tile to="sponsorship-opportunity">
               <v-list-tile-sub-title>{{$t("sponsorshipOpportunity")}}</v-list-tile-sub-title>
             </v-list-tile>
           </v-list>
         </v-menu>
       </v-tab>
       <v-tab ripple>
-        {{$t('about')}}
+        <v-menu offset-y :nudge-bottom="12" :nudge-left="12" open-on-hover>
+          <div slot="activator" color='light-blue accent-4'>{{$t("about")}} </div>
+          <v-list>
+            <v-list-tile to="fdes">
+              <v-list-tile-sub-title>{{$t("fdes")}}</v-list-tile-sub-title>
+            </v-list-tile>
+            <v-list-tile to="associated-media">
+              <v-list-tile-sub-title>{{$t("associatedMedia")}}</v-list-tile-sub-title>
+            </v-list-tile>
+          </v-list>
+        </v-menu>
       </v-tab>
     </v-tabs>
   </v-toolbar>
