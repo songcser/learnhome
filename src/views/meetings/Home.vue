@@ -1,96 +1,120 @@
 <template>
   <section>
-    <v-carousel hide-controls transition="fade">
-      <v-carousel-item v-for="(item,i) in items" :src="item.src" :key="i"></v-carousel-item>
+    <v-carousel hide-controls transition="fade" >
+      <v-carousel-item v-for="(item,i) in items" :src="item.src" :key="i" height="400px"></v-carousel-item>
     </v-carousel>
-    <v-container grid-list-lg>
-      <div class="headline">大会背景</div>
-      <v-divider class="my-3"></v-divider>
+    <v-container fluid grid-list-lg>
       <v-layout row wrap>
-        <v-flex xs12>
-          <v-card color="cyan darken-2" class="white--text">
-            <v-container fluid grid-list-lg>
-              <v-layout row>
-                <v-flex xs7>
-                  <div>
-                    <div>柴油机热效率高，动力性强，能减少高达45%的温室气体排放，但是其燃烧产生的氮氧化物(NOx)和颗粒物（PM)却是PM2.5最大来源。占汽车保有量仅7.8%的柴油货车，排放了57.3%的NOx和77.8%的PM，是机动车污染防治的重中之重。故2018年国家各部委相继把重型货车的污染治理当作污染防治攻坚战的重点。</div>
-                  </div>
-                </v-flex>
-                <v-flex xs5>
-                  <v-card-media :src="beiying1" height="125px" contain></v-card-media>
-                </v-flex>
-              </v-layout>
-            </v-container>
-          </v-card>
+        <v-flex xs8>
+          <div class="headline">大会背景</div>
+          <v-divider class="my-3"></v-divider>
+          <v-layout row wrap>
+            <v-flex xs12>
+              <v-card color="cyan darken-2" class="white--text">
+                <v-container fluid grid-list-lg>
+                  <v-layout row>
+                    <v-flex xs7>
+                      <div>
+                        <div>柴油机热效率高，动力性强，能减少高达45%的温室气体排放，但是其燃烧产生的氮氧化物(NOx)和颗粒物（PM)却是PM2.5最大来源。占汽车保有量仅7.8%的柴油货车，排放了57.3%的NOx和77.8%的PM，是机动车污染防治的重中之重。故2018年国家各部委相继把重型货车的污染治理当作污染防治攻坚战的重点。</div>
+                      </div>
+                    </v-flex>
+                    <v-flex xs5>
+                      <v-card-media :src="beiying1" height="125px" contain></v-card-media>
+                    </v-flex>
+                  </v-layout>
+                </v-container>
+              </v-card>
+            </v-flex>
+            <v-flex xs12>
+              <v-card color="teal darken-2" class="white--text">
+                <v-container fluid grid-list-lg>
+                  <v-layout row>
+                    <v-flex xs7>
+                      <div>
+                        <div>按照最新政策，国六a排放限值方案将于2020年执行，国六b标准将于2023年实施——在这样严峻的形势下，无论是商用车、非道路移动机械、发动机生产企业，还是排放技术的专业提供商，都需要加大节能减排技术的研发更新，甚至提前在可替代能源和新能源的产品上进行布局，为更严格的排放法规做好准备。</div>
+                      </div>
+                    </v-flex>
+                    <v-flex xs5>
+                      <v-card-media :src="beiying2" height="125px" contain></v-card-media>
+                    </v-flex>
+                  </v-layout>
+                </v-container>
+              </v-card>
+            </v-flex>
+            <v-flex xs12>
+              <v-card color="green darken-2" class="white--text">
+                <v-container fluid grid-list-lg>
+                  <v-layout row>
+                    <v-flex xs7>
+                      <div>
+                        <div>未来柴油机峰会系列2019，将立足于中国柴油发动机行业的实际情况，探讨业内人士比较关心的节能减排政策法规和最新的技术动向以及未来的发展；这里还将是一个您与政府高层、OEM制造商、行业领袖和专家进行国际项目交流的最佳平台。</div>
+                      </div>
+                    </v-flex>
+                    <v-flex xs5>
+                      <v-card-media :src="beiying3" height="125px" contain></v-card-media>
+                    </v-flex>
+                  </v-layout>
+                </v-container>
+              </v-card>
+            </v-flex>
+          </v-layout>
+          <div mt-5 class="headline">峰会亮点</div>
+          <v-divider class="my-3"></v-divider>
+          <v-layout row wrap>
+            <v-flex xs12 sm8>
+              <v-list subheader>
+                <template v-for="(item, index) in liangdians">
+                  <v-list-tile :key="index">
+                    <v-list-tile-action>
+                      <v-icon>send</v-icon>
+                    </v-list-tile-action>
+                    <v-list-tile-content class="listcontent">
+                      {{item}}
+                    </v-list-tile-content>
+                  </v-list-tile>
+                </template>
+              </v-list>
+            </v-flex>
+            <v-flex xs12 sm4>
+              <v-card elevation-24>
+                <v-card-media height="200px">
+                  <v-progress-circular :size="200" :width="25" :rotate="-90" :value="timestart" color="primary">
+                    {{ timetext }}
+                  </v-progress-circular>
+                </v-card-media>
+                <v-card-title primary-title>
+                  <h3 class="headline mb-3">赞助商</h3>
+                  <vue-seamless-scroll :data="listData" class="seamless-warp">
+                    <ul>
+                      <li class="item" v-for="(item, index) in listData" :key="index">
+                        <img class="center" :src="item.src" height="50px" />
+                      </li>
+                    </ul>
+                  </vue-seamless-scroll>
+                </v-card-title>
+              </v-card>
+            </v-flex>
+          </v-layout>
         </v-flex>
-        <v-flex xs12>
-          <v-card color="teal darken-2" class="white--text">
-            <v-container fluid grid-list-lg>
-              <v-layout row>
-                <v-flex xs7>
-                  <div>
-                    <div>按照最新政策，国六a排放限值方案将于2020年执行，国六b标准将于2023年实施——在这样严峻的形势下，无论是商用车、非道路移动机械、发动机生产企业，还是排放技术的专业提供商，都需要加大节能减排技术的研发更新，甚至提前在可替代能源和新能源的产品上进行布局，为更严格的排放法规做好准备。</div>
-                  </div>
-                </v-flex>
-                <v-flex xs5>
-                  <v-card-media :src="beiying2" height="125px" contain></v-card-media>
-                </v-flex>
-              </v-layout>
-            </v-container>
+        <v-flex xs4>
+          <section  class="aside">
+          <v-card class="aside-card" >
+              <v-card-media class="box-card-image">
+                <img class="" :src="require('@/assets/1510913616286.jpg')"/>
+              </v-card-media>
+              <v-card-title primary-title>
+                  <h3 class="headline">主办方</h3>
+              </v-card-title>
           </v-card>
-        </v-flex>
-        <v-flex xs12>
-          <v-card color="green darken-2" class="white--text">
-            <v-container fluid grid-list-lg>
-              <v-layout row>
-                <v-flex xs7>
-                  <div>
-                    <div>未来柴油机峰会系列2019，将立足于中国柴油发动机行业的实际情况，探讨业内人士比较关心的节能减排政策法规和最新的技术动向以及未来的发展；这里还将是一个您与政府高层、OEM制造商、行业领袖和专家进行国际项目交流的最佳平台。</div>
-                  </div>
-                </v-flex>
-                <v-flex xs5>
-                  <v-card-media :src="beiying3" height="125px" contain></v-card-media>
-                </v-flex>
-              </v-layout>
-            </v-container>
+          <v-card class="aside-card" >
+              <v-card-media>
+                <img class="logo" :src="require('@/assets/logo/360che.jpg')"/>
+              </v-card-media>
+              <v-card-title primary-title>
+                  <h3 class="headline">展台赞助商</h3>
+              </v-card-title>
           </v-card>
-        </v-flex>
-      </v-layout>
-      <div mt-5 class="headline">峰会亮点</div>
-      <v-divider class="my-3"></v-divider>
-      <v-layout row wrap>
-        <v-flex xs12 sm8>
-          <v-list subheader>
-            <template v-for="(item, index) in liangdians">
-              <v-list-tile :key="index">
-                <v-list-tile-action>
-                  <v-icon>send</v-icon>
-                </v-list-tile-action>
-                <v-list-tile-content class="listcontent">
-                  {{item}}
-                </v-list-tile-content>
-              </v-list-tile>
-            </template>
-          </v-list>
-        </v-flex>
-        <v-flex xs12 sm4>
-          <v-card elevation-24>
-            <v-card-media height="200px">
-              <v-progress-circular :size="200" :width="25" :rotate="-90" :value="timestart" color="primary">
-                {{ timetext }}
-              </v-progress-circular>
-            </v-card-media>
-            <v-card-title primary-title>
-              <h3 class="headline mb-3">赞助商</h3>
-              <vue-seamless-scroll :data="listData" class="seamless-warp">
-                <ul>
-                  <li class="item" v-for="(item, index) in listData" :key="index">
-                    <img class="center" :src="item.src" height="50px" />
-                  </li>
-                </ul>
-              </vue-seamless-scroll>
-            </v-card-title>
-          </v-card>
+          </section>
         </v-flex>
       </v-layout>
     </v-container>
@@ -113,7 +137,7 @@ export default {
           src: require("@/assets/0921.jpg")
         },
         {
-          src: require("@/assets/5a02.jpg")
+          src: require("@/assets/b8367.jpg")
         }
       ],
       liangdians: [
@@ -236,7 +260,7 @@ export default {
         {
           title: "无缝滚动第九行无缝滚动第九行",
           src: require("@/assets/logo/wangyi.jpg")
-        },
+        }
       ]
     };
   },
@@ -292,5 +316,33 @@ export default {
   margin: 10px;
   border-bottom: 1px solid grey;
   text-align: center;
+}
+
+.aside {
+  margin: 90px 10px 20px 10px;
+}
+
+.aside-card {
+  background: #fff;
+  box-shadow: -5px 5px 10px #888888;
+  margin-top: 20px;
+}
+
+.box-card-image {
+  position: relative;
+  transition: all 0.2s linear;
+  img {
+    width: 100%;
+    height: 200px;
+    transition: all 0.2s linear;
+    &:hover {
+      transform: scale(1.1, 1.1);
+      filter: contrast(130%);
+    }
+  }
+}
+.logo {
+  padding: 30px 30px 0px 30px;
+  height: 150px;
 }
 </style>
