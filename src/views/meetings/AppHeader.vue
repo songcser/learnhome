@@ -55,8 +55,9 @@
           </v-list>
         </v-menu>
       </v-tab>
-      <v-tab ripple>
-        <v-menu offset-y :nudge-bottom="12" :nudge-left="12" open-on-hover>
+      <v-tab to="associated-media" ripple>
+        {{$t('associatedMedia')}}
+        <!-- <v-menu offset-y :nudge-bottom="12" :nudge-left="12" open-on-hover>
           <div slot="activator" color='light-blue accent-4'>{{$t("about")}} </div>
           <v-list>
             <v-list-tile to="fdes">
@@ -66,7 +67,7 @@
               <v-list-tile-sub-title>{{$t("associatedMedia")}}</v-list-tile-sub-title>
             </v-list-tile>
           </v-list>
-        </v-menu>
+        </v-menu> -->
       </v-tab>
     </v-tabs>
   </v-toolbar>

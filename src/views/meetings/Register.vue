@@ -34,17 +34,12 @@
                   <v-checkbox v-model="zhiwei" label="购买资料" value="goumaiziliao"></v-checkbox>
                 </v-flex>
               </v-layout>
+              <v-text-field v-model="company" label="公司" required></v-text-field>
               <v-text-field v-model="name" label="姓名" required></v-text-field>
               <v-text-field v-model="job" label="职位" required></v-text-field>
-              <v-text-field v-model="company" label="公司" required></v-text-field>
-              <v-text-field v-model="address" label="地址"></v-text-field>
-              <v-text-field v-model="zipcode" label="邮编"></v-text-field>
-              <v-text-field v-model="country" label="国家"></v-text-field>
-              <v-text-field v-model="countryzipcode" label="国家区号"></v-text-field>
-              <v-text-field v-model="phone" label="电话"></v-text-field>
-              <v-text-field v-model="fax" label="传真"></v-text-field>
-              <v-text-field v-model="email" label="邮箱"></v-text-field>
+              <v-text-field v-model="phone" label="办公电话"></v-text-field>
               <v-text-field v-model="mobile" label="手机号码"></v-text-field>
+              <v-text-field v-model="email" label="邮箱"></v-text-field>
               <v-layout row wrap>
                 <v-flex xs6 sm3>
                   <div>你如何找到我们会议的：</div>
@@ -59,22 +54,21 @@
                   <v-checkbox v-model="lookfor" label="邮箱" value="email2"></v-checkbox>
                 </v-flex>
                 <v-flex xs6 sm2>
-                  <v-checkbox v-model="lookfor" label="传真" value="fax"></v-checkbox>
-                </v-flex>
-                <v-flex xs6 sm2>
                   <v-checkbox v-model="lookfor" label="公司手册" value="companybook"></v-checkbox>
+                </v-flex>
+                <v-flex xs6 sm3>
                 </v-flex>
                 <v-flex xs6 sm2>
                   <v-checkbox v-model="lookfor" label="同事" value="colleague"></v-checkbox>
-                </v-flex>
-                <v-flex xs6 sm3>
-                  <v-checkbox v-model="lookfor" label="以前的与会代表" value="delegates"></v-checkbox>
                 </v-flex>
                 <v-flex xs6 sm2>
                   <v-checkbox v-model="lookfor" label="出版刊物" value="publication"></v-checkbox>
                 </v-flex>
                 <v-flex xs6 sm2>
                   <v-checkbox v-model="lookfor" label="销售员" value="salesperson"></v-checkbox>
+                </v-flex>
+                <v-flex xs6 sm3>
+                  <v-checkbox v-model="lookfor" label="以前的与会代表" value="delegates"></v-checkbox>
                 </v-flex>
               </v-layout>
             </v-form>
@@ -110,12 +104,8 @@ export default {
     };
   },
   methods: {
-    onSubmit () {
-
-    },
-    cancel () {
-
-    }
+    onSubmit() {},
+    cancel() {}
   }
 };
 </script>

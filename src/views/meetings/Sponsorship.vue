@@ -24,7 +24,7 @@ export default {
   name: "",
   data () {
     return {
-      bg: require('@/assets/9b83.jpg')
+      bg: require('@/assets/1512.jpg')
     }
   }
 }

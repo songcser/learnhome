@@ -114,4 +114,15 @@ export default {
 .list {
   background: none;
 }
+.hotlight {
+  transition: transform 0.4s linear;
+}
+.hotlight:hover {
+  color: #ea1d5d;
+  transform: translateX(10px);
+  -moz－transform: translateX(10px);
+  -webkit-transform: translateX(10px);
+  -o-transform: translateX(10px);
+  -ms-transform: translateX(10px);
+}
 </style>

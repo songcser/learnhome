@@ -107,13 +107,13 @@ export default {
     return {
       items: [
         {
-          src: require("@/assets/2611.jpg")
+          src: require("@/assets/MAT_0592.jpg")
         },
         {
-          src: require("@/assets/c427c.jpg")
+          src: require("@/assets/0921.jpg")
         },
         {
-          src: require("@/assets/54c2.jpg")
+          src: require("@/assets/5a02.jpg")
         }
       ],
       liangdians: [

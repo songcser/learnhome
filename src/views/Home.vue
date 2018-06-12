@@ -157,7 +157,7 @@
     </v-app>
 </template>
 <script>
-import bg from "@/assets/f43d.jpg";
+import bg from "@/assets/234.jpg";
 import timg from "@/assets/timg.jpg";
 export default {
   name: "home",
