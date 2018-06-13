@@ -1,74 +1,95 @@
 <template>
-  <v-container>
-    <div class="headline mt-5">政府&协会</div>
-    <v-divider class="my-3"></v-divider>
+  <v-container fluid grid-list-lg>
     <v-layout row wrap>
-      <v-flex xs12 sm6>
-        <v-list subheader>
-          <template v-for="(item, index) in zhengfuxiehui">
-            <v-list-tile v-if="index%2 == 0" :key="index">
-              <v-list-tile-action>
-                <v-icon>send</v-icon>
-              </v-list-tile-action>
-              <v-list-tile-content class="hotlight">
-                {{item}}
-              </v-list-tile-content>
+      <v-flex xs8>
+        <div class="headline mt-5">参会嘉宾</div>
+        <v-divider class="my-3"></v-divider>
+          <v-list>
+            <template  v-for="(item, index) in hangye">
+            <v-list-tile :key="index" class="progress-list">
+              <div class="progress-text">{{item.text}}</div>
+               <v-progress-linear :value="item.value" height="15" :color="item.color"></v-progress-linear>
             </v-list-tile>
-          </template>
-        </v-list>
+            </template>
+          </v-list>
+        <div class="headline mt-5">政府&协会</div>
+        <v-divider class="my-3"></v-divider>
+        <v-layout row wrap>
+          <v-flex xs12 sm6>
+            <v-list subheader>
+              <template v-for="(item, index) in zhengfuxiehui">
+                <v-list-tile v-if="index%2 == 0" :key="index">
+                  <v-list-tile-action>
+                    <v-icon>send</v-icon>
+                  </v-list-tile-action>
+                  <v-list-tile-content class="hotlight">
+                    {{item}}
+                  </v-list-tile-content>
+                </v-list-tile>
+              </template>
+            </v-list>
+          </v-flex>
+          <v-flex xs12 sm6>
+            <v-list subheader>
+              <template v-for="(item, index) in zhengfuxiehui">
+                <v-list-tile v-if="index%2 == 1" :key="index">
+                  <v-list-tile-action>
+                    <v-icon>send</v-icon>
+                  </v-list-tile-action>
+                  <v-list-tile-content class="hotlight">
+                    {{item}}
+                  </v-list-tile-content>
+                </v-list-tile>
+              </template>
+            </v-list>
+          </v-flex>
+        </v-layout>
+        <div class="headline mt-5">行业领袖</div>
+        <v-divider class="my-3"></v-divider>
+        <v-layout row wrap>
+          <v-flex xs12 sm6>
+            <v-list subheader>
+              <template v-for="(item, index) in hangyelingxiu">
+                <v-list-tile v-if="index%2 == 0" :key="index">
+                  <v-list-tile-action>
+                    <v-icon>send</v-icon>
+                  </v-list-tile-action>
+                  <v-list-tile-content class="hotlight">
+                    {{item}}
+                  </v-list-tile-content>
+                </v-list-tile>
+              </template>
+            </v-list>
+          </v-flex>
+          <v-flex xs12 sm6>
+            <v-list subheader>
+              <template v-for="(item, index) in hangyelingxiu">
+                <v-list-tile v-if="index%2 == 1" :key="index">
+                  <v-list-tile-action>
+                    <v-icon>send</v-icon>
+                  </v-list-tile-action>
+                  <v-list-tile-content class="hotlight">
+                    {{item}}
+                  </v-list-tile-content>
+                </v-list-tile>
+              </template>
+            </v-list>
+          </v-flex>
+        </v-layout>
       </v-flex>
-      <v-flex xs12 sm6>
-        <v-list subheader>
-          <template v-for="(item, index) in zhengfuxiehui">
-            <v-list-tile v-if="index%2 == 1" :key="index">
-              <v-list-tile-action>
-                <v-icon>send</v-icon>
-              </v-list-tile-action>
-              <v-list-tile-content class="hotlight">
-                {{item}}
-              </v-list-tile-content>
-            </v-list-tile>
-          </template>
-        </v-list>
-      </v-flex>
-    </v-layout>
-    <div class="headline mt-5">行业领袖</div>
-    <v-divider class="my-3"></v-divider>
-    <v-layout row wrap>
-      <v-flex xs12 sm6>
-        <v-list subheader>
-          <template v-for="(item, index) in hangyelingxiu">
-            <v-list-tile v-if="index%2 == 0" :key="index">
-              <v-list-tile-action>
-                <v-icon>send</v-icon>
-              </v-list-tile-action>
-              <v-list-tile-content class="hotlight">
-                {{item}}
-              </v-list-tile-content>
-            </v-list-tile>
-          </template>
-        </v-list>
-      </v-flex>
-      <v-flex xs12 sm6>
-        <v-list subheader>
-          <template v-for="(item, index) in hangyelingxiu">
-            <v-list-tile v-if="index%2 == 1" :key="index">
-              <v-list-tile-action>
-                <v-icon>send</v-icon>
-              </v-list-tile-action>
-              <v-list-tile-content class="hotlight">
-                {{item}}
-              </v-list-tile-content>
-            </v-list-tile>
-          </template>
-        </v-list>
+      <v-flex xs4>
+        <app-aside />
       </v-flex>
     </v-layout>
   </v-container>
 </template>
 <script>
+import AppAside from '@/views/meetings/AppAside'
 export default {
   name: "participant",
+  components: {
+    AppAside,
+  },
   data() {
     return {
       zhengfuxiehui: [
@@ -105,7 +126,89 @@ export default {
         "西南研究院",
         "博世",
         "罗兰贝格"
-        ]
+      ],
+      hangye: [
+        {
+          text: '政府以及行业规则制定者',
+          value: 90,
+          color: 'error'
+        },
+        {
+          text: '发动机制造商',
+          value: 80,
+          color: 'error'
+        },
+        {
+          text: '发动机零部件供应商',
+          value: 75,
+          color: 'warning'
+        },
+        {
+          text: '汽车制造商',
+          value: 70,
+          color: 'warning'
+        },
+        {
+          text: '商用车制造商',
+          value: 60,
+          color: 'info'
+        },
+        {
+          text: '非公路移动机械制造商',
+          value: 60,
+          color: 'info'
+        },
+        {
+          text: '后处理系统&部件供应商',
+          value: 50,
+          color: 'info'
+        },
+        {
+          text: '车用尿素供应商',
+          value: 45,
+          color: 'info'
+        },
+        {
+          text: '柴油供应商',
+          value: 43,
+          color: 'info'
+        },
+        {
+          text: '润滑油供应商',
+          value: 30,
+          color: 'info'
+        },
+        {
+          text: '动力总成制造商',
+          value: 27,
+          color: 'success'
+        },
+        {
+          text: '技术系统方案供应商',
+          value: 25,
+          color: 'success'
+        },
+        {
+          text: '发动机技术供应商',
+          value: 20,
+          color: 'success'
+        },
+        {
+          text: '催化剂供应商',
+          value: 19,
+          color: 'success'
+        },
+        {
+          text: '咨询机构',
+          value: 12,
+          color: 'secondary'
+        },
+        {
+          text: '科研院所',
+          value: 10,
+          color: 'secondary'
+        },
+      ]
     };
   }
 };
@@ -118,6 +221,25 @@ export default {
   transition: transform 0.4s linear;
 }
 .hotlight:hover {
+  color: #ea1d5d;
+  transform: translateX(10px);
+  -moz－transform: translateX(10px);
+  -webkit-transform: translateX(10px);
+  -o-transform: translateX(10px);
+  -ms-transform: translateX(10px);
+}
+.progress-list {
+  height: 30px;
+}
+.progress-text {
+  width: 300px;
+  color: black;
+  font-size: 18px;
+  text-align: right;
+  margin-right: 20px;
+  transition: transform 0.4s linear;
+}
+.progress-text:hover {
   color: #ea1d5d;
   transform: translateX(10px);
   -moz－transform: translateX(10px);
