@@ -46,10 +46,6 @@
               </symbol>
             </svg>
           </v-flex>
-          <v-flex xs12 sm4>
-            <div class="title">如果您对赞助事宜有任何疑问，请直接发邮件到:</div>
-            <div>draymond.ma@fiveoit.com</div>
-          </v-flex>
         </v-layout>
         <div class="headline mt-5">成为我们的赞助商主要能给您带来什么利益呢？</div>
         <v-divider class="my-3"></v-divider>
