@@ -1,5 +1,7 @@
 <template>
-  <v-container grid-list-lg>
+  <v-container fluid grid-list-lg>
+    <v-layout row wrap>
+      <v-flex xs8>
     <div class="headline mt-5">合作媒体</div>
     <v-divider class="my-3"></v-divider>
     <v-layout row wrap >
@@ -14,11 +16,20 @@
         </v-card>
       </v-flex>
     </v-layout>
+      </v-flex>
+      <v-flex xs4>
+        <app-aside />
+      </v-flex>
+    </v-layout>
   </v-container>
 </template>
 <script>
+import AppAside from "@/views/meetings/AppAside";
 export default {
   name: "associated-media",
+  components: {
+    AppAside,
+  },
   data () {
     return {
       logos: [
