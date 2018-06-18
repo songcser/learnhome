@@ -17,7 +17,7 @@ export default {
   props: {
     words: {
       type: Array,
-      default: () => ['F', 'I', 'V', 'O', 'E']
+      default: () => ['F', 'D', 'E', 'S', 'C']
     }
   }
 }

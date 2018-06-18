@@ -18,7 +18,8 @@
         <img class="logo" :src="require('@/assets/logo/360che.jpg')" />
       </v-card-media>
       <v-card-title primary-title>
-        <h3 class="headline">展台赞助商</h3>
+        <h3 class="headline">赞助商</h3>
+        <div>持续更新中......</div>
       </v-card-title>
     </v-card>
   </section>

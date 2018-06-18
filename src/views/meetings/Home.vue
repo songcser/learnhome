@@ -1,7 +1,7 @@
 <template>
   <section>
-    <v-carousel hide-controls transition="fade" >
-      <v-carousel-item v-for="(item,i) in items" :src="item.src" :key="i" height="400px"></v-carousel-item>
+    <v-carousel hide-controls transition="fade" height="700px">
+      <v-carousel-item v-for="(item,i) in items" :src="item.src" :key="i"></v-carousel-item>
     </v-carousel>
     <v-container fluid grid-list-lg>
       <v-layout row wrap>
@@ -32,7 +32,7 @@
                   </v-progress-circular>
                 </v-card-media>
                 <v-card-title primary-title>
-                  <h3 class="headline mb-3">赞助商</h3>
+                  <h3 class="headline mb-3">合作媒体</h3>
                   <vue-seamless-scroll :data="listData" class="seamless-warp">
                     <ul>
                       <li class="item" v-for="(item, index) in listData" :key="index">
@@ -68,14 +68,24 @@ export default {
     return {
       items: [
         {
-          src: require("@/assets/MAT_0592.jpg")
-        },
-        {
           src: require("@/assets/0921.jpg")
         },
         {
-          src: require("@/assets/b8367.jpg")
-        }
+          src: require("@/assets/jingxuan/fadongji5.png")
+        },
+        {
+          src: require("@/assets/jingxuan/huosai1.png")
+        },
+        {
+          src: require('@/assets/jingxuan/huoche3.png')
+        },
+        {
+          src: require('@/assets/jingxuan/zhangzaiji.png')
+        },
+        {
+          src: require("@/assets/86694.jpg")
+        },
+
       ],
       liangdians: [
         "道路柴油车“国六”标准剖析及最新进展",

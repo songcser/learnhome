@@ -1,6 +1,10 @@
 <template>
-  <v-toolbar dark tabs extended>
-    <v-toolbar-title>{{$t('name')}}</v-toolbar-title>
+  <v-toolbar dark tabs extended height="78px" color='green'>
+    <v-spacer></v-spacer>
+    <v-toolbar-title class="title">
+      {{$t('meetingName')}} -- <small>绿色动力，驱动未来</small>
+      <div class="subtitle">4月10日-11日，中国上海</div>
+    </v-toolbar-title>
     <v-spacer></v-spacer>
     <v-menu offset-y>
       <v-btn slot="activator" icon>
@@ -18,7 +22,7 @@
     <v-btn icon>
       <v-icon>more_vert</v-icon>
     </v-btn>
-    <v-tabs slot="extension" dark align-with-title>
+    <v-tabs slot="extension" dark align-with-title >
       <v-tabs-slider color="yellow"></v-tabs-slider>
       <v-tab to="/meeting/home" ripple>
         {{$t('home')}}
@@ -117,6 +121,13 @@ export default {
   margin: 0;
   min-width: 0;
   height:100%;
+}
+.subtitle {
+  font-size: 16px;
+  margin: 5px 0 0 0;
+}
+.title {
+  text-align: center;
 }
 </style>
 

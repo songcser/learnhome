@@ -3,7 +3,7 @@
     <v-layout row wrap>
       <v-flex xs12 sm6 md3>
         <div class="view view-eighth elevation-24">
-          <img :src="require('@/assets/MAT_1654.jpg')" />
+          <img :src="require('@/assets/jingxuan/fadongji3.png')" />
           <div class="mask">
             <h2>300行业决策者</h2>
           </div>
@@ -21,7 +21,7 @@
         <div class="view view-eighth elevation-24">
           <img :src="require('@/assets/MAT_1659.jpg')" />
           <div class="mask">
-            <h2>100外资代表</h2>
+            <h2>100OEM+发动机厂商代表</h2>
           </div>
         </div>
       </v-flex>
@@ -43,8 +43,8 @@ export default {
 </script>
 <style lang='scss' scoped>
 .view {
-  width: 100%;
-  height: 100%;
+   width: 100%;
+   height: 100%;
    margin: 10px;
    display:inline;
    float: left;
