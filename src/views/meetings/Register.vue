@@ -20,8 +20,8 @@
               <v-card-text>
                 <v-form>
                   <v-layout row wrap>
-                    <v-flex xs3>
-                      <div class="headline">我想要成为：</div>
+                    <v-flex xs2>
+                      <div>我想要成为：</div>
                     </v-flex>
                     <v-flex xs2>
                       <v-checkbox v-model="zhiwei" label="与会代表" value="daibiao"></v-checkbox>

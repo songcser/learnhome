@@ -19,7 +19,6 @@
                 <ol>
                   <li  v-for="(item, index) in sponsorships" :key="index">
                     <mark>{{item.name}}</mark>
-                    <small>{{item.value}}</small>
                   </li>
                 </ol>
               </div>
@@ -114,6 +113,9 @@ export default {
           name: '胸牌赞助商',
           value: 27,
         },
+        {
+          name: '更多',
+        }
       ],
       liyi: [
         "增强品牌曝光和提高品牌认知度",
