@@ -14,6 +14,7 @@ import MeetingSponsorship from "@/views/meetings/Sponsorship"
 import MeetingSponsorshipOpportunity from "@/views/meetings/SponsorshipOpportunity"
 import MeetingFdes from "@/views/meetings/Fdes"
 import MeetingAssociatedMedia from "@/views/meetings/AssociatedMedia"
+import MeetingOem from "@/views/meetings/Oem"
 
 Vue.use(VueRouter);
 
@@ -76,6 +77,10 @@ const router = new VueRouter({
             {
               path: 'associated-media',
               component: MeetingAssociatedMedia
+            },
+            {
+              path: 'oem',
+              component: MeetingOem
             }
         ]
     }

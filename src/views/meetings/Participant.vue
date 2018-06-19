@@ -130,82 +130,82 @@ export default {
       hangye: [
         {
           text: '政府以及行业规则制定者',
-          value: 90,
-          color: 'error'
+          value: 10,
+          color: 'success'
         },
         {
           text: '发动机制造商',
-          value: 80,
-          color: 'error'
+          value: 50,
+          color: 'warning'
         },
         {
           text: '发动机零部件供应商',
-          value: 75,
-          color: 'warning'
+          value: 85,
+          color: 'error'
         },
         {
           text: '汽车制造商',
-          value: 70,
-          color: 'warning'
-        },
-        {
-          text: '商用车制造商',
-          value: 60,
-          color: 'info'
-        },
-        {
-          text: '非公路移动机械制造商',
-          value: 60,
-          color: 'info'
-        },
-        {
-          text: '后处理系统&部件供应商',
-          value: 50,
-          color: 'info'
-        },
-        {
-          text: '车用尿素供应商',
-          value: 45,
-          color: 'info'
-        },
-        {
-          text: '柴油供应商',
-          value: 43,
-          color: 'info'
-        },
-        {
-          text: '润滑油供应商',
           value: 30,
           color: 'info'
         },
         {
-          text: '动力总成制造商',
-          value: 27,
+          text: '商用车制造商',
+          value: 70,
+          color: 'error'
+        },
+        {
+          text: '非公路移动机械制造商',
+          value: 65,
+          color: 'error'
+        },
+        {
+          text: '后处理系统&部件供应商',
+          value: 40,
+          color: 'info'
+        },
+        {
+          text: '车用尿素供应商',
+          value: 10,
           color: 'success'
+        },
+        {
+          text: '柴油供应商',
+          value: 20,
+          color: 'info'
+        },
+        {
+          text: '润滑油供应商',
+          value: 20,
+          color: 'info'
+        },
+        {
+          text: '动力总成制造商',
+          value: 62,
+          color: 'warning'
         },
         {
           text: '技术系统方案供应商',
-          value: 25,
-          color: 'success'
+          value: 45,
+          color: 'info'
         },
         {
           text: '发动机技术供应商',
-          value: 20,
-          color: 'success'
+          value: 58,
+          color: 'warning'
         },
         {
           text: '催化剂供应商',
-          value: 19,
+          value: 10,
           color: 'success'
         },
         {
           text: '咨询机构',
-          value: 12,
+          value: 5,
           color: 'secondary'
         },
         {
           text: '科研院所',
-          value: 10,
+          value: 5,
           color: 'secondary'
         },
       ]

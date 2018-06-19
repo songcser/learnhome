@@ -30,7 +30,7 @@
       <v-tab to="/meeting/participant" ripple>
         {{$t('participant')}}
       </v-tab>
-      <v-tab ripple>
+      <v-tab to="/meeting/oem" ripple>
         {{$t("oem")}}
       </v-tab>
       <v-tab to="registration" ripple>

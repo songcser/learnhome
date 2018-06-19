@@ -13,7 +13,7 @@
           </v-container>
         </section>
         <section>
-          <v-parallax :src="require('@/assets/c427c.jpg')" height="150">
+          <v-parallax :src="require('@/assets/jingxuan/huoche2.png')" height="150">
           </v-parallax>
         </section>
         <section>
@@ -26,7 +26,7 @@
           </v-container>
         </section>
         <section>
-          <v-parallax :src="require('@/assets/c427c.jpg')" height="150">
+          <v-parallax :src="require('@/assets/jingxuan/huoche2.png')" height="150">
           </v-parallax>
         </section>
         <section>

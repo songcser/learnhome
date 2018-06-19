@@ -19,6 +19,7 @@
                 <ol>
                   <li  v-for="(item, index) in sponsorships" :key="index">
                     <mark>{{item.name}}</mark>
+                    <small><v-icon>mdi-tennis</v-icon></small>
                   </li>
                 </ol>
               </div>
@@ -110,12 +111,9 @@ export default {
           value: 30,
         },
         {
-          name: '胸牌赞助商',
+          name: '更多...',
           value: 27,
         },
-        {
-          name: '更多',
-        }
       ],
       liyi: [
         "增强品牌曝光和提高品牌认知度",

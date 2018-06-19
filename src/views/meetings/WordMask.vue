@@ -3,7 +3,7 @@
     <v-layout row wrap>
       <v-flex xs12 sm6 md3>
         <div class="view view-eighth elevation-24">
-          <img :src="require('@/assets/jingxuan/fadongji3.png')" />
+          <img :src="require('@/assets/list01.png')" />
           <div class="mask">
             <h2>300行业决策者</h2>
           </div>
@@ -11,7 +11,7 @@
       </v-flex>
       <v-flex xs12 sm6 md3>
         <div class="view view-eighth elevation-24">
-          <img :src="require('@/assets/MAT_1264.jpg')" />
+          <img :src="require('@/assets/list02.png')" />
           <div class="mask">
             <h2>160优秀企业</h2>
           </div>
@@ -19,7 +19,7 @@
       </v-flex>
       <v-flex xs12 sm6 md3>
         <div class="view view-eighth elevation-24">
-          <img :src="require('@/assets/MAT_1659.jpg')" />
+          <img :src="require('@/assets/list03.png')" />
           <div class="mask">
             <h2>100OEM+发动机厂商代表</h2>
           </div>
@@ -27,7 +27,7 @@
       </v-flex>
       <v-flex xs12 sm6 md3>
         <div class="view view-eighth elevation-24">
-          <img :src="require('@/assets/MAT_0603.jpg')" />
+          <img :src="require('@/assets/list04.png')" />
           <div class="mask">
             <h2>40媒体合作</h2>
           </div>
@@ -41,19 +41,21 @@ export default {
   name: "word-mask"
 };
 </script>
-<style lang='scss' scoped>
+<style scoped>
 .view {
+  width: 100%;
+  height: 100%;
    margin: 10px;
    display:inline;
    border: 10px solid #fff;
    overflow: hidden;
    position: relative;
+   float: left;
    text-align: center;
    -webkit-box-shadow: 1px 1px 2px #e6e6e6;
    -moz-box-shadow: 1px 1px 2px #e6e6e6;
    box-shadow: 1px 1px 2px #e6e6e6;
    cursor: default;
-  //  background: #fff url(../images/bgimg.jpg) no-repeat center center;
 }
 .view .mask,.view .content {
    width: 100%;

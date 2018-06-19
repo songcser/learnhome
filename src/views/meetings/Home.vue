@@ -1,12 +1,58 @@
 <template>
   <section>
-    <v-carousel hide-controls transition="fade" height="700px">
+    <v-carousel lazy hide-controls transition="fade" height="700px">
       <v-carousel-item v-for="(item,i) in items" :src="item.src" :key="i"></v-carousel-item>
     </v-carousel>
     <v-container fluid grid-list-lg>
       <v-layout row wrap>
         <v-flex xs8>
-          <word-mask />
+          <!-- <word-mask /> -->
+          <v-layout row wrap class="mt-3">
+            <v-flex xs6 md3>
+              <div class="icon-list">
+                <div>
+                  <img :src="require('@/assets/list01.png')" width="160px" height="160px"/>
+                </div>
+                <div>
+                  <p>300</p>
+                  <p>行业决策者</p>
+                </div>
+              </div>
+            </v-flex>
+            <v-flex xs6 md3>
+              <div class="icon-list">
+                <div>
+                  <img :src="require('@/assets/list02.png')" width="160px" height="160px"/>
+                </div>
+                <div>
+                  <p>160</p>
+                  <p>优秀企业</p>
+                </div>
+              </div>
+            </v-flex>
+            <v-flex xs6 md3>
+              <div class="icon-list">
+                <div>
+                  <img :src="require('@/assets/list03.png')" width="160px" height="160px"/>
+                </div>
+                <div>
+                  <p>100</p>
+                  <p>OEM+发动机厂商代表</p>
+                </div>
+              </div>
+            </v-flex>
+            <v-flex xs6 md3>
+               <div class="icon-list">
+                <div>
+                  <img :src="require('@/assets/list04.png')" width="160px" height="160px"/>
+                </div>
+                <div>
+                  <p>40</p>
+                  <p>媒体合作</p>
+                </div>
+              </div>
+            </v-flex>
+          </v-layout>
           <div mt-5 class="headline">峰会亮点</div>
           <v-divider class="my-3"></v-divider>
           <v-layout row wrap>
@@ -55,14 +101,14 @@
 <script>
 import VueSeamlessScroll from "vue-seamless-scroll";
 
-import AppAside from '@/views/meetings/AppAside'
-import WordMask from '@/views/meetings/WordMask'
+import AppAside from "@/views/meetings/AppAside";
+import WordMask from "@/views/meetings/WordMask";
 export default {
   name: "home",
   components: {
     VueSeamlessScroll,
     AppAside,
-    WordMask,
+    WordMask
   },
   data() {
     return {
@@ -77,15 +123,14 @@ export default {
           src: require("@/assets/jingxuan/huosai1.png")
         },
         {
-          src: require('@/assets/jingxuan/huoche3.png')
+          src: require("@/assets/jingxuan/huoche3.png")
         },
         {
-          src: require('@/assets/jingxuan/zhangzaiji.png')
+          src: require("@/assets/jingxuan/zhangzaiji.png")
         },
         {
           src: require("@/assets/86694.jpg")
-        },
-
+        }
       ],
       liangdians: [
         "道路柴油车“国六”标准剖析及最新进展",
@@ -264,5 +309,21 @@ export default {
   border-bottom: 1px solid grey;
   text-align: center;
 }
-
+.icon-list {
+  position: relative;
+  width: 160px;
+  text-align: center;
+}
+.icon-list div:nth-child(2) {
+  position: absolute;
+  top: 55px;
+  left: 25px;
+}
+.icon-list p {
+  font-size: 26.48px;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  height: 30px;
+}
 </style>
