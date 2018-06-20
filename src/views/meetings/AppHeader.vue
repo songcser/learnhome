@@ -1,7 +1,7 @@
 <template>
-  <v-toolbar dark tabs extended height="78px" color='green'>
+  <v-toolbar dark tabs extended height="100px" color='green'>
     <v-spacer></v-spacer>
-    <v-toolbar-title class="title">
+    <v-toolbar-title class="display-1">
       {{$t('meetingName')}} -- <small>绿色动力，驱动未来</small>
       <div class="subtitle">4月10日-11日，中国上海</div>
     </v-toolbar-title>
@@ -22,23 +22,27 @@
     <v-btn icon>
       <v-icon>more_vert</v-icon>
     </v-btn>
-    <v-tabs slot="extension" dark align-with-title >
+    <v-tabs slot="extension" dark align-with-title>
       <v-tabs-slider color="yellow"></v-tabs-slider>
       <v-tab to="/meeting/home" ripple>
-        {{$t('home')}}
+        <span class="title">{{$t('home')}}</span>
       </v-tab>
-      <v-tab to="/meeting/participant" ripple>
-        {{$t('participant')}}
+      <v-tab  to="/meeting/participant" ripple>
+        <span class="title">{{$t('participant')}}</span>
       </v-tab>
       <v-tab to="/meeting/oem" ripple>
-        {{$t("oem")}}
+        <span class="title">{{$t("oem")}}</span>
       </v-tab>
       <v-tab to="registration" ripple>
         <v-menu offset-y :nudge-bottom="12" :nudge-left="12" open-on-hover>
-          <div class="menu-btn" slot="activator" color='light-blue accent-4'>{{$t("registration")}} </div>
+          <div class="menu-btn" slot="activator" color='light-blue accent-4'>
+            <span class="title">{{$t("registration")}}</span>
+           </div>
           <v-list>
             <v-list-tile to="registration">
-              <v-list-tile-sub-title>{{$t("whyRegistration")}}</v-list-tile-sub-title>
+              <v-list-tile-sub-title>
+                {{$t("whyRegistration")}}
+              </v-list-tile-sub-title>
             </v-list-tile>
             <v-list-tile to="register">
               <v-list-tile-sub-title>{{$t("register")}}</v-list-tile-sub-title>
@@ -48,7 +52,9 @@
       </v-tab>
       <v-tab ripple>
          <v-menu offset-y :nudge-bottom="12" :nudge-left="12" open-on-hover>
-          <div slot="activator" color='light-blue accent-4'>{{$t("sponsorship")}} </div>
+          <div slot="activator" color='light-blue accent-4'>
+            <span class="title">{{$t("sponsorship")}}</span>
+          </div>
           <v-list>
             <v-list-tile to="sponsorship">
               <v-list-tile-sub-title>{{$t("whySponsorship")}}</v-list-tile-sub-title>
@@ -60,7 +66,7 @@
         </v-menu>
       </v-tab>
       <v-tab to="associated-media" ripple>
-        {{$t('associatedMedia')}}
+        <span class="title">{{$t('associatedMedia')}}</span>
         <!-- <v-menu offset-y :nudge-bottom="12" :nudge-left="12" open-on-hover>
           <div slot="activator" color='light-blue accent-4'>{{$t("about")}} </div>
           <v-list>
@@ -126,8 +132,11 @@ export default {
   font-size: 16px;
   margin: 5px 0 0 0;
 }
-.title {
+.display-1 {
   text-align: center;
+}
+.tabsitem {
+  font-size: 20px !important;
 }
 </style>
 

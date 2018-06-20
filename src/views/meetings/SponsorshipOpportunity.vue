@@ -2,8 +2,6 @@
   <v-container fluid grid-list-lg>
     <v-layout row wrap>
       <v-flex xs12 sm8>
-        <div>本次峰会是您寻找优质供应商和目标客户的最佳平台。</div>
-        <div>选择赞助我们的会议能给您提供一系列的在目标决策者和现场的行业高管面前展示您的企业形象和品牌宣传的机会！</div>
         <div class="headline mt-5">您能选择的赞助机会和形式：</div>
         <v-divider class="my-3"></v-divider>
         <v-layout row wrap>
@@ -131,6 +129,9 @@ export default {
   background: none;
 }
 .hotlight {
+  margin-top: 5px;
+  height: 60px;
+  font-size: 20px;
   transition: transform 0.4s linear;
 }
 .hotlight:hover {
@@ -203,6 +204,7 @@ export default {
         margin: 0;
         background: none;
         color: #fff;
+        font-size: 20px;
 
         &::before,
         &::after {

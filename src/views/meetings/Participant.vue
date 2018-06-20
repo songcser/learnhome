@@ -218,6 +218,8 @@ export default {
   background: none;
 }
 .hotlight {
+  height: 60px;
+  font-size: 20px;
   transition: transform 0.4s linear;
 }
 .hotlight:hover {

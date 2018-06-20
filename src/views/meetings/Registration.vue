@@ -7,7 +7,7 @@
           <v-container grid-list-xl>
             <v-card class="elevation-0 transparent">
               <v-card-title primary-title class="layout justify-center">
-                <div class="subheading">柴油机热效率高，动力性强，能减少高达45%的温室气体排放，但是其燃烧产生的氮氧化物(NOx)和颗粒物（PM)却是PM2.5最大来源。占汽车保有量仅7.8%的柴油货车，排放了57.3%的NOx和77.8%的PM，是机动车污染防治的重中之重。故2018年国家各部委相继把重型货车的污染治理当作污染防治攻坚战的重点。</div>
+                <div class="headline">柴油机热效率高，动力性强，能减少高达45%的温室气体排放，但是其燃烧产生的氮氧化物(NOx)和颗粒物（PM)却是PM2.5最大来源。占汽车保有量仅7.8%的柴油货车，排放了57.3%的NOx和77.8%的PM，是机动车污染防治的重中之重。故2018年国家各部委相继把重型货车的污染治理当作污染防治攻坚战的重点。</div>
               </v-card-title>
             </v-card>
           </v-container>
@@ -20,7 +20,7 @@
           <v-container grid-list-xl>
             <v-card class="elevation-0 transparent">
               <v-card-title primary-title class="layout justify-center">
-                <div class="subheading">按照最新政策，国六a排放限值方案将于2020年执行，国六b标准将于2023年实施——在这样严峻的形势下，无论是商用车、非道路移动机械、发动机生产企业，还是排放技术的专业提供商，都需要加大节能减排技术的研发更新，甚至提前在可替代能源和新能源的产品上进行布局，为更严格的排放法规做好准备。</div>
+                <div class="headline">按照最新政策，国六a排放限值方案将于2020年执行，国六b标准将于2023年实施——在这样严峻的形势下，无论是商用车、非道路移动机械、发动机生产企业，还是排放技术的专业提供商，都需要加大节能减排技术的研发更新，甚至提前在可替代能源和新能源的产品上进行布局，为更严格的排放法规做好准备。</div>
               </v-card-title>
             </v-card>
           </v-container>
@@ -33,44 +33,11 @@
           <v-container grid-list-xl>
             <v-card class="elevation-0 transparent">
               <v-card-title primary-title class="layout justify-center">
-                <div class="subheading">未来柴油机峰会系列2019，将立足于中国柴油发动机行业的实际情况，探讨业内人士比较关心的节能减排政策法规和最新的技术动向以及未来的发展；这里还将是一个您与政府高层、OEM制造商、行业领袖和专家进行国际项目交流的最佳平台。</div>
+                <div class="headline">未来柴油机峰会系列2019，将立足于中国柴油发动机行业的实际情况，探讨业内人士比较关心的节能减排政策法规和最新的技术动向以及未来的发展；这里还将是一个您与政府高层、OEM制造商、行业领袖和专家进行国际项目交流的最佳平台。</div>
               </v-card-title>
             </v-card>
           </v-container>
         </section>
-        <div class="headline mt-5">为什么参加?</div>
-        <v-divider class="my-3"></v-divider>
-        <v-jumbotron :src="bg">
-          <v-container fill-height>
-            <v-layout align-center justify-space-between>
-              <v-flex>
-              </v-flex>
-              <v-flex sm12 md10>
-                <div class="headline mb-3 content">全球云计算大会·中国站（Cloud Connect China）聚焦云计算的实用性问题，专注于厂商、开发者和具体的商业行动，特别侧重案列分析及分享。通过专业会议与展览相结合的模式，力图以中立的态度聚集、展示行业内领先技术企业，设置高可信度的论坛及教育来探讨云计算的最新发展趋势，吸引决策者和思想领导者等战略层面的观众，从而打造成全球云计算产业顶端活动。</div>
-              </v-flex>
-              <v-flex>
-              </v-flex>
-            </v-layout>
-          </v-container>
-        </v-jumbotron>
-        <div class="headline mt-5">参加Cloud Connect China，您将可以：</div>
-        <v-divider class="my-3"></v-divider>
-        <v-layout row wrap>
-          <v-flex xs12 sm6>
-            <v-list subheader>
-              <template v-for="(item, index) in jihui">
-                <v-list-tile :key="index">
-                  <v-list-tile-action>
-                    <v-icon>send</v-icon>
-                  </v-list-tile-action>
-                  <v-list-tile-content class="hotlight">
-                    {{item}}
-                  </v-list-tile-content>
-                </v-list-tile>
-              </template>
-            </v-list>
-          </v-flex>
-        </v-layout>
       </v-flex>
       <v-flex xs4>
         <app-aside />
@@ -135,6 +102,9 @@ export default {
   -webkit-transform: translateX(10px);
   -o-transform: translateX(10px);
   -ms-transform: translateX(10px);
+}
+.headline {
+  font-size: 20px !important
 }
 </style>
 

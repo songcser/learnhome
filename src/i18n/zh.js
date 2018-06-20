@@ -6,7 +6,7 @@ export default {
     intro: "永远创新和有价值的会议活动组织者",
     more: "查看更多",
     connection: "可以在社交网络上联系我们",
-    address: "上海市宝山区杨泰路",
+    address: "上海市潘园公路1800号",
     phone: "021-1234567",
     email: "user@fiveo.com",
     advisoryBoard: "专家顾问团",

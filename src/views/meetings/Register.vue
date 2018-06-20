@@ -5,14 +5,7 @@
         <div class="headline mt-5">注册报名</div>
         <v-divider class="my-3"></v-divider>
         <v-layout row wrap>
-          <v-flex xs12 sm3 md3>
-            <div> 请联系我们获取报名表格 </div>
-            <div> 电话： 0086 21 3319 1337 </div>
-            <div> 邮箱： info@borscon.com </div>
-            <div> 我们客户经理会帮您预留席位 </div>
-            <div> 或者您也可以填写以下信息在线注册 </div>
-          </v-flex>
-          <v-flex xs12 sm9 md9>
+          <v-flex xs12>
             <v-card>
               <v-card-title>
                 <div class="headline">2018中国国际汽车发动机峰会</div>
@@ -74,12 +67,16 @@
                     </v-flex>
                   </v-layout>
                 </v-form>
+
               </v-card-text>
               <v-card-actions>
                 <v-btn color="primary" @click.stop="onSubmit">提交</v-btn>
                 <v-btn color="primary" @click.stop="cancle">取消</v-btn>
               </v-card-actions>
             </v-card>
+            <div class="mt-3"> 请联系我们获取大会议程和赞助协议 </div>
+            <div> 电话： 0086 21 3319 1337 </div>
+            <div> 邮箱： info@borscon.com </div>
           </v-flex>
         </v-layout>
       </v-flex>

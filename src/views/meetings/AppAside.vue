@@ -7,13 +7,13 @@
     </v-card>
     <v-card class="aside-card">
       <v-card-media class="box-card-image">
-        <img class="" :src="require('@/assets/1510913616286.jpg')" />
+        <img class="logo" :src="require('@/assets/fiveo.png')" />
       </v-card-media>
       <v-card-title primary-title>
         <h3 class="headline">主办方</h3>
       </v-card-title>
     </v-card>
-    <v-card class="aside-card">
+    <!-- <v-card class="aside-card">
       <v-card-media>
         <img class="logo" :src="require('@/assets/logo/360che.jpg')" />
       </v-card-media>
@@ -21,7 +21,7 @@
         <h3 class="headline">赞助商 </h3>
         <span ml-4>(持续更新中......)</span>
       </v-card-title>
-    </v-card>
+    </v-card> -->
   </section>
 </template>
 <script>

@@ -4,7 +4,7 @@
       <v-flex xs8>
         <div class="headline mt-5">大会新闻</div>
         <v-divider class="my-3"></v-divider>
-        <div class="title mb-3">我们将邀请超过总参会嘉宾40%的OEM和发动机厂商与会共襄盛举，畅谈未来</div>
+        <div class="title mb-3">我们将邀请超过总参会嘉宾40%的OEM和发动机厂商与会共襄盛举，畅谈未来!</div>
         <v-layout row wrap>
           <v-flex xs12 sm4>
             <v-card class="elevation-12">

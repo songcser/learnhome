@@ -37,7 +37,7 @@
                 </div>
                 <div>
                   <p>100</p>
-                  <p>OEM+发动机厂商代表</p>
+                  <p style="font-size: 18px">OEM+发动机厂商代表</p>
                 </div>
               </div>
             </v-flex>
@@ -57,7 +57,7 @@
           <v-divider class="my-3"></v-divider>
           <v-layout row wrap>
             <v-flex xs12 sm8>
-              <v-list subheader>
+              <v-list>
                 <template v-for="(item, index) in liangdians">
                   <v-list-tile :key="index">
                     <v-list-tile-action>
@@ -159,7 +159,6 @@ export default {
       beiying2: require("@/assets/a75d.jpg"),
       beiying3: require("@/assets/w640.jpg"),
       timestart: 0,
-      timetext: "倒计时",
       listData: [
         {
           title: "无缝滚动第一行无缝滚动第一行",
@@ -259,6 +258,15 @@ export default {
   beforeDestroy() {
     clearInterval(this.interval);
   },
+  computed: {
+    timetext () {
+      let now = new Date()
+      let dt = new Date(2019, 4, 10)
+      let intervalMsec = dt - Date.now()
+      let day = parseInt(intervalMsec / 1000 / 3600 / 24)
+      return "倒计时" + day + "天"
+    }
+  },
   mounted() {
     this.interval = setInterval(() => {
       if (this.timestart >= 100) {
@@ -279,6 +287,8 @@ export default {
   border-right: 3px solid grey;
 }
 .listcontent {
+  height: 60px;
+  font-size: 20px;
   transition: transform 0.4s linear;
 }
 .listcontent:hover {
@@ -317,10 +327,10 @@ export default {
 .icon-list div:nth-child(2) {
   position: absolute;
   top: 55px;
-  left: 25px;
+  left: 40px;
 }
 .icon-list p {
-  font-size: 26.48px;
+  font-size: 20.48px;
   margin: 0;
   padding: 0;
   font-weight: bold;

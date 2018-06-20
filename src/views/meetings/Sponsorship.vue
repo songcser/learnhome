@@ -2,9 +2,19 @@
   <v-container fluid grid-list-lg>
     <v-layout row wrap>
       <v-flex xs8>
-        <div class="headline mt-5">云计算消费升级 为什么公有云巨头都在拓展MSP市场？</div>
+        <div class="headline mt-5">趋势报告</div>
         <v-divider class="my-3"></v-divider>
-        <v-jumbotron :src="bg">
+        <div class="subheader">全球演讲者阵容，分享国际柴油机行业现状和最热门领域的见解和实践案例。</div>
+        <div class="headline mt-5">展示产品和技术</div>
+        <v-divider class="my-3"></v-divider>
+        <div class="subheader">中国未来柴油机峰会展览区将汇集多家国内外制造商，展示尖端技术，优良产品和设备，呼应大会。</div>
+        <div class="headline mt-5">品牌</div>
+        <v-divider class="my-3"></v-divider>
+        <div class="subheader">近50家国内外媒体合作伙伴，其中多家主流媒体作为指定的新闻发布机构和社交媒体，SMS，EDM和其他自媒体将全面传播此次活动和客户。</div>
+        <div class="headline mt-5">与活跃买家联系</div>
+        <v-divider class="my-3"></v-divider>
+        <div class="subheader">中国未来柴油机峰会每年将邀请来自发动机，汽车，商用车，工程机械，农机，特种车辆等应用行业的数百名采购副总，供应链管理总监，CTO和研发总监等行业专家和领袖。</div>
+        <!-- <v-jumbotron :src="bg">
           <v-container fill-height>
             <v-layout align-center justify-space-between>
               <v-flex>
@@ -18,7 +28,7 @@
               </v-flex>
             </v-layout>
           </v-container>
-        </v-jumbotron>
+        </v-jumbotron> -->
       </v-flex>
       <v-flex xs4>
         <app-aside />
@@ -65,5 +75,9 @@ export default {
 }
 .list {
   background: none;
+}
+.subheader {
+  color: black;
+  font-size: 20px;
 }
 </style>
