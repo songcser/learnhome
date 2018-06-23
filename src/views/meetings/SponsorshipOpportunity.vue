@@ -2,7 +2,7 @@
   <v-container fluid grid-list-lg>
     <v-layout row wrap>
       <v-flex xs12 sm8>
-        <div class="headline mt-5">您能选择的赞助机会和形式：</div>
+        <div class="headline mt-5">{{$t('meeting.so.choose')}}</div>
         <v-divider class="my-3"></v-divider>
         <v-layout row wrap>
           <v-flex xs12 sm8>
@@ -12,11 +12,11 @@
                   <svg class="ico-cup">
                     <use xlink:href="#cup"></use>
                   </svg>
-                  赞助商
+                  {{$t('meeting.so.sponsorship')}}
                 </h1>
                 <ol>
                   <li  v-for="(item, index) in sponsorships" :key="index">
-                    <mark>{{item.name}}</mark>
+                    <mark>{{$t('meeting.so.list.l'+(index+1))}}</mark>
                     <small><v-icon>mdi-tennis</v-icon></small>
                   </li>
                 </ol>
@@ -48,7 +48,7 @@
         <div class="headline mt-5">成为我们的赞助商主要能给您带来什么利益呢？</div>
         <v-divider class="my-3"></v-divider>
         <v-layout row wrap>
-          <v-flex xs12 sm6>
+          <v-flex xs12 sm12>
             <v-list subheader>
               <template v-for="(item, index) in liyi">
                 <v-list-tile :key="index">
@@ -56,7 +56,7 @@
                     <v-icon>star</v-icon>
                   </v-list-tile-action>
                   <v-list-tile-content class="hotlight">
-                    {{item}}
+                    {{$t('meeting.so.mb.list.l'+(index+1))}}
                   </v-list-tile-content>
                 </v-list-tile>
               </template>
@@ -97,11 +97,11 @@ export default {
           value: 70,
         },
         {
-          name: '鸡尾酒会赞助商',
+          name: '签到墙赞助商',
           value: 63,
         },
         {
-          name: '圆桌讨论赞助商',
+          name: '广告讨论赞助商',
           value: 52,
         },
         {
@@ -115,9 +115,8 @@ export default {
       ],
       liyi: [
         "增强品牌曝光和提高品牌认知度",
-        "更多的与目标客户和优质供应商的商业洽谈的机会",
         "演讲和展览的机会",
-        "300字左右的业务简介+您公司网站的超链接",
+        "更多的与目标客户和优质供应商的商业洽谈的机会",
         "您的公司Logo放置于大会背景板和所有的相关宣传资料上"
       ],
     };

@@ -2,20 +2,19 @@
   <v-container fluid grid-list-lg>
     <v-layout row wrap>
       <v-flex xs8>
-    <div class="headline mt-5">合作媒体</div>
-    <v-divider class="my-3"></v-divider>
-    <v-layout row wrap >
-      <v-flex xs12 sm6 md4 v-for="(item, index) in logos" :key="index">
-        <v-card elevation-12>
-          <v-card-media>
-            <img :src="item.src" height="100px" />
-          </v-card-media>
-          <v-card-title>
-            <div class="headline mb-0">{{item.title}}</div>
-          </v-card-title>
-        </v-card>
-      </v-flex>
-    </v-layout>
+        <v-divider class="my-3"></v-divider>
+        <v-layout row wrap>
+          <v-flex xs12 sm6 md4 v-for="(item, index) in logos" :key="index">
+            <v-card elevation-12>
+              <v-card-media>
+                <img :src="item.src" height="100px" />
+              </v-card-media>
+              <v-card-title>
+                <div class="headline mb-0">{{item.title}}</div>
+              </v-card-title>
+            </v-card>
+          </v-flex>
+        </v-layout>
       </v-flex>
       <v-flex xs4>
         <app-aside />
@@ -28,9 +27,9 @@ import AppAside from "@/views/meetings/AppAside";
 export default {
   name: "associated-media",
   components: {
-    AppAside,
+    AppAside
   },
-  data () {
+  data() {
     return {
       logos: [
         {
@@ -124,14 +123,14 @@ export default {
         {
           title: "网易汽车",
           src: require("@/assets/logo/wangyi.jpg")
-        },
+        }
       ]
-    }
+    };
   }
 };
 </script>
 <style scoped>
 img {
-  padding: 20px
+  padding: 20px;
 }
 </style>

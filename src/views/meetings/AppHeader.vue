@@ -1,12 +1,12 @@
 <template>
-  <v-toolbar dark tabs extended height="100px" color='green'>
-    <v-spacer></v-spacer>
-    <v-toolbar-title class="display-1">
-      {{$t('meetingName')}} -- <small>绿色动力，驱动未来</small>
-      <div class="subtitle">4月10日-11日，中国上海</div>
+  <v-toolbar dark tabs extended height="120px" color='green'>
+    <img class="logo" :src="logo" />
+    <v-toolbar-title class="display-1  black--text">
+      {{$t('meetingName')}} <small>{{$t('meeting.subtitle')}}</small>
+      <div class="subtitle">{{$t("meeting.address")}}</div>
     </v-toolbar-title>
     <v-spacer></v-spacer>
-    <v-menu offset-y>
+    <!-- <v-menu offset-y>
       <v-btn slot="activator" icon>
         <img :src="lang.src">
       </v-btn>
@@ -15,14 +15,17 @@
           <img :src="otherLang.src">
         </v-list-tile>
       </v-list>
-    </v-menu>
-    <v-btn icon>
-      <v-icon>search</v-icon>
+    </v-menu> -->
+     <v-btn icon :avatar=true @click="changeLang('zh')">
+      <img :src="lang.src">
+    </v-btn>
+    <v-btn icon :avatar=true @click="changeLang('en')">
+      <img :src="otherLang.src">
     </v-btn>
     <v-btn icon>
-      <v-icon>more_vert</v-icon>
+      <v-icon></v-icon>
     </v-btn>
-    <v-tabs slot="extension" dark align-with-title>
+    <v-tabs slot="extension" dark align-with-title grow>
       <v-tabs-slider color="yellow"></v-tabs-slider>
       <v-tab to="/meeting/home" ripple>
         <span class="title">{{$t('home')}}</span>
@@ -50,7 +53,7 @@
           </v-list>
         </v-menu>
       </v-tab>
-      <v-tab ripple>
+      <v-tab  to="sponsorship" ripple>
          <v-menu offset-y :nudge-bottom="12" :nudge-left="12" open-on-hover>
           <div slot="activator" color='light-blue accent-4'>
             <span class="title">{{$t("sponsorship")}}</span>
@@ -88,6 +91,7 @@ export default {
   name: "app-header",
   data() {
     return {
+      logo: require('@/assets/meeting/logo6.png'),
       lang: {
         name: "zh",
         src: "https://countryflags.io/cn/flat/32.png"
@@ -100,11 +104,12 @@ export default {
   },
   computed: {},
   methods: {
-    changeLang() {
-      let l = this.lang;
-      this.lang = this.otherLang;
-      this.otherLang = l;
-      this.$i18n.locale = this.lang.name;
+    changeLang(lang) {
+      // let l = this.lang;
+      // this.lang = this.otherLang;
+      // this.otherLang = l;
+      console.log(lang)
+      this.$i18n.locale = lang;
     },
     toAdvisoryBoard() {}
   }
@@ -137,6 +142,9 @@ export default {
 }
 .tabsitem {
   font-size: 20px !important;
+}
+.logo {
+  height: 85px;
 }
 </style>
 

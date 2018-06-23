@@ -8,7 +8,7 @@
           <v-flex xs12>
             <v-card>
               <v-card-title>
-                <div class="headline">2018中国国际汽车发动机峰会</div>
+                <div class="headline">2019中国未来柴油机峰会</div>
               </v-card-title>
               <v-card-text>
                 <v-form>
@@ -75,8 +75,8 @@
               </v-card-actions>
             </v-card>
             <div class="mt-3"> 请联系我们获取大会议程和赞助协议 </div>
-            <div> 电话： 0086 21 3319 1337 </div>
-            <div> 邮箱： info@borscon.com </div>
+            <div> 电话： +86-21-56500750 </div>
+            <div> 邮箱： info@fiveoit.com </div>
           </v-flex>
         </v-layout>
       </v-flex>
@@ -111,7 +111,9 @@ export default {
     };
   },
   methods: {
-    onSubmit() {},
+    onSubmit() {
+      window.open("")
+    },
     cancel() {}
   }
 };

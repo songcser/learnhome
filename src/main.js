@@ -6,7 +6,7 @@ import 'vuetify/dist/vuetify.css'
 import i18n from './i18n'
 import router from './router'
 
-import './styles/index.scss'
+import './styles/index.css'
 
 Vue.use(Vuetify)
 

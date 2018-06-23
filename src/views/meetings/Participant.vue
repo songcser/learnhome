@@ -2,42 +2,42 @@
   <v-container fluid grid-list-lg>
     <v-layout row wrap>
       <v-flex xs8>
-        <div class="headline mt-5">参会嘉宾</div>
+        <div class="headline mt-5">{{$t('meeting.delegates')}}</div>
         <v-divider class="my-3"></v-divider>
           <v-list>
             <template  v-for="(item, index) in hangye">
             <v-list-tile :key="index" class="progress-list">
-              <div class="progress-text">{{item.text}}</div>
+              <div class="progress-text">{{$t("hangye.text"+(index+1))}}</div>
                <v-progress-linear :value="item.value" height="15" :color="item.color"></v-progress-linear>
             </v-list-tile>
             </template>
           </v-list>
-        <div class="headline mt-5">政府&协会</div>
+        <div class="headline mt-5">{{$t('meeting.ga.name')}}</div>
         <v-divider class="my-3"></v-divider>
         <v-layout row wrap>
           <v-flex xs12 sm6>
-            <v-list subheader>
+            <v-list subheader two-line>
               <template v-for="(item, index) in zhengfuxiehui">
                 <v-list-tile v-if="index%2 == 0" :key="index">
                   <v-list-tile-action>
                     <v-icon>send</v-icon>
                   </v-list-tile-action>
                   <v-list-tile-content class="hotlight">
-                    {{item}}
+                    {{$t('meeting.ga.l' + index)}}
                   </v-list-tile-content>
                 </v-list-tile>
               </template>
             </v-list>
           </v-flex>
           <v-flex xs12 sm6>
-            <v-list subheader>
+            <v-list subheader two-line>
               <template v-for="(item, index) in zhengfuxiehui">
                 <v-list-tile v-if="index%2 == 1" :key="index">
                   <v-list-tile-action>
                     <v-icon>send</v-icon>
                   </v-list-tile-action>
                   <v-list-tile-content class="hotlight">
-                    {{item}}
+                    {{$t('meeting.ga.l' + index)}}
                   </v-list-tile-content>
                 </v-list-tile>
               </template>
@@ -216,9 +216,10 @@ export default {
 <style scoped>
 .list {
   background: none;
+  line-height:18px;
 }
 .hotlight {
-  height: 60px;
+  height: 75px;
   font-size: 20px;
   transition: transform 0.4s linear;
 }
@@ -231,7 +232,7 @@ export default {
   -ms-transform: translateX(10px);
 }
 .progress-list {
-  height: 30px;
+  height: 45px;
 }
 .progress-text {
   width: 300px;

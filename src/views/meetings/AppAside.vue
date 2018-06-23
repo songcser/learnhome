@@ -10,7 +10,7 @@
         <img class="logo" :src="require('@/assets/fiveo.png')" />
       </v-card-media>
       <v-card-title primary-title>
-        <h3 class="headline">主办方</h3>
+        <h3 class="headline">{{$t('meeting.organizer')}}</h3>
       </v-card-title>
     </v-card>
     <!-- <v-card class="aside-card">
