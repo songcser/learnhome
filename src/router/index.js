@@ -7,14 +7,14 @@ import AdvisoryBoard from "@/views/AdvisoryBoard";
 import Events from "@/views/Events";
 import MeetingLayout from "@/layout/meeting/index";
 import MeetingHome from "@/views/meetings/Home";
-import MeetingParticipant from "@/views/meetings/Participant"
-import MeetingRegistration from "@/views/meetings/Registration"
-import MeetingRegister from "@/views/meetings/Register"
-import MeetingSponsorship from "@/views/meetings/Sponsorship"
-import MeetingSponsorshipOpportunity from "@/views/meetings/SponsorshipOpportunity"
-import MeetingFdes from "@/views/meetings/Fdes"
-import MeetingAssociatedMedia from "@/views/meetings/AssociatedMedia"
-import MeetingOem from "@/views/meetings/Oem"
+import MeetingParticipant from "@/views/meetings/Participant";
+import MeetingRegistration from "@/views/meetings/Registration";
+import MeetingRegister from "@/views/meetings/Register";
+import MeetingSponsorship from "@/views/meetings/Sponsorship";
+import MeetingSponsorshipOpportunity from "@/views/meetings/SponsorshipOpportunity";
+import MeetingFdes from "@/views/meetings/Fdes";
+import MeetingAssociatedMedia from "@/views/meetings/AssociatedMedia";
+import MeetingOem from "@/views/meetings/Oem";
 
 Vue.use(VueRouter);
 
@@ -23,7 +23,7 @@ const router = new VueRouter({
     {
       path: "/",
       component: Layout,
-      redirect: "home",
+      redirect: "/desc/home",
       children: [
         {
           path: "home",
@@ -41,48 +41,50 @@ const router = new VueRouter({
           path: "events",
           component: Events
         }
-      ],
-    },{
-        path: "/meeting",
-        component: MeetingLayout,
-        children: [
-            {
-                path: "home",
-                component: MeetingHome
-            },
-            {
-              path: "participant",
-              component: MeetingParticipant
-            },
-            {
-              path: 'registration',
-              component: MeetingRegistration
-            },
-            {
-              path: 'register',
-              component: MeetingRegister
-            },
-            {
-              path: 'sponsorship',
-              component: MeetingSponsorship
-            },
-            {
-              path: 'sponsorship-opportunity',
-              component: MeetingSponsorshipOpportunity
-            },
-            {
-              path: 'fdes',
-              component: MeetingFdes
-            },
-            {
-              path: 'associated-media',
-              component: MeetingAssociatedMedia
-            },
-            {
-              path: 'oem',
-              component: MeetingOem
-            }
-        ]
+      ]
+    },
+    {
+      path: "/desc",
+      component: MeetingLayout,
+      redirect: "/desc/home",
+      children: [
+        {
+          path: "home",
+          component: MeetingHome
+        },
+        {
+          path: "participant",
+          component: MeetingParticipant
+        },
+        {
+          path: "registration",
+          component: MeetingRegistration
+        },
+        {
+          path: "register",
+          component: MeetingRegister
+        },
+        {
+          path: "sponsorship",
+          component: MeetingSponsorship
+        },
+        {
+          path: "sponsorship-opportunity",
+          component: MeetingSponsorshipOpportunity
+        },
+        {
+          path: "fdes",
+          component: MeetingFdes
+        },
+        {
+          path: "associated-media",
+          component: MeetingAssociatedMedia
+        },
+        {
+          path: "oem",
+          component: MeetingOem
+        }
+      ]
     }
   ]
 });

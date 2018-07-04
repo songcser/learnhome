@@ -9,7 +9,7 @@
       <v-card-media class="box-card-image">
         <img class="logo" :src="require('@/assets/fiveo.png')" />
       </v-card-media>
-      <v-card-title primary-title>
+      <v-card-title primary-title class="organizer">
         <h3 class="headline">{{$t('meeting.organizer')}}</h3>
       </v-card-title>
     </v-card>
@@ -36,7 +36,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .aside {
-  margin: 90px 10px 20px 10px;
+  margin: 60px 10px 20px 10px;
 }
 
 .aside-card {
@@ -61,6 +61,9 @@ export default {
 .logo {
   padding: 30px 30px 0px 30px;
   height: 150px;
+}
+h3 {
+  margin: auto;
 }
 </style>
 

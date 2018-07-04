@@ -1,7 +1,7 @@
 <template>
   <v-container fluid grid-list-lg>
     <v-layout row wrap>
-      <v-flex xs8>
+      <v-flex xs12 md8>
         <section>
           <v-container grid-list-xl>
             <v-card class="elevation-0 transparent">
@@ -38,7 +38,7 @@
           </v-container>
         </section>
       </v-flex>
-      <v-flex xs4>
+      <v-flex xs12 md4 hidden-xs-only>
         <app-aside />
       </v-flex>
     </v-layout>

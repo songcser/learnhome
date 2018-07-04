@@ -45,7 +45,7 @@
             </svg>
           </v-flex>
         </v-layout>
-        <div class="headline mt-5">成为我们的赞助商主要能给您带来什么利益呢？</div>
+        <div class="headline mt-5">{{$t('meeting.benefits')}}</div>
         <v-divider class="my-3"></v-divider>
         <v-layout row wrap>
           <v-flex xs12 sm12>
@@ -64,7 +64,7 @@
           </v-flex>
         </v-layout>
       </v-flex>
-      <v-flex xs4>
+      <v-flex xs12 md4 hidden-xs-only>
         <app-aside />
       </v-flex>
     </v-layout>
@@ -143,7 +143,7 @@ export default {
 }
 
 .leaderboard {
-  width: 385px;
+  width: 300px;
   height: 508px;
   background: linear-gradient(to bottom, #3a404d, #181c26);
   border-radius: 10px;

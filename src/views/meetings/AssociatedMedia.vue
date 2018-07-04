@@ -1,7 +1,7 @@
 <template>
   <v-container fluid grid-list-lg>
     <v-layout row wrap>
-      <v-flex xs8>
+      <v-flex xs12 md8>
         <v-divider class="my-3"></v-divider>
         <v-layout row wrap>
           <v-flex xs12 sm6 md4 v-for="(item, index) in logos" :key="index">
@@ -16,7 +16,7 @@
           </v-flex>
         </v-layout>
       </v-flex>
-      <v-flex xs4>
+      <v-flex xs12 md4 hidden-xs-only>
         <app-aside />
       </v-flex>
     </v-layout>
@@ -35,6 +35,18 @@ export default {
         {
           title: "卡车之家",
           src: require("@/assets/logo/360che.jpg")
+        },
+        {
+          title: "DieselNet",
+          src: require('@/assets/logo/dieselnet.jpg'),
+        },
+        {
+          title: "Diesel Progress Magazine",
+          src: require("@/assets/logo/dieselprogress.png")
+        },
+        {
+          title: "OEM Off-Highway",
+          src: require("@/assets/logo/oemoffhighway.png")
         },
         {
           title: "铁甲网",
@@ -59,10 +71,6 @@ export default {
         {
           title: "商用车新网",
           src: require("@/assets/logo/cvnews.png")
-        },
-        {
-          title: "Diesel Progress Magazine",
-          src: require("@/assets/logo/dieselprogress.png")
         },
         {
           title: "Fuel Market News",
@@ -99,10 +107,6 @@ export default {
         {
           title: "中国农机网",
           src: require("@/assets/logo/nongjx.png")
-        },
-        {
-          title: "OEM Off-Highway",
-          src: require("@/assets/logo/oemoffhighway.png")
         },
         {
           title: "商用车在线",

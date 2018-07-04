@@ -1,8 +1,8 @@
 <template>
   <v-toolbar dark tabs extended height="120px" color='green'>
-    <img class="logo" :src="logo" />
-    <v-toolbar-title class="display-1  black--text">
-      {{$t('meetingName')}} <small>{{$t('meeting.subtitle')}}</small>
+    <img class="logo" v-if="logoshow" :src="logo" />
+    <v-toolbar-title :class="titleshow">
+      {{$t('meetingName')}} <small v-if="logoshow">{{$t('meeting.subtitle')}}</small>
       <div class="subtitle">{{$t("meeting.address")}}</div>
     </v-toolbar-title>
     <v-spacer></v-spacer>
@@ -22,24 +22,24 @@
     <v-btn icon :avatar=true @click="changeLang('en')">
       <img :src="otherLang.src">
     </v-btn>
-    <v-btn icon>
+    <v-btn  v-if="logoshow" icon>
       <v-icon></v-icon>
     </v-btn>
     <v-tabs slot="extension" dark align-with-title grow>
       <v-tabs-slider color="yellow"></v-tabs-slider>
-      <v-tab to="/meeting/home" ripple>
-        <span class="title">{{$t('home')}}</span>
+      <v-tab to="home" ripple>
+        <span class="title normal">{{$t('home')}}</span>
       </v-tab>
-      <v-tab  to="/meeting/participant" ripple>
-        <span class="title">{{$t('participant')}}</span>
+      <v-tab  to="participant" ripple>
+        <span class="title normal">{{$t('participant')}}</span>
       </v-tab>
-      <v-tab to="/meeting/oem" ripple>
-        <span class="title">{{$t("oem")}}</span>
+      <v-tab to="oem" ripple>
+        <span class="title normal">{{$t("oem")}}</span>
       </v-tab>
       <v-tab to="registration" ripple>
         <v-menu offset-y :nudge-bottom="12" :nudge-left="12" open-on-hover>
           <div class="menu-btn" slot="activator" color='light-blue accent-4'>
-            <span class="title">{{$t("registration")}}</span>
+            <span class="title normal">{{$t("registration")}}</span>
            </div>
           <v-list>
             <v-list-tile to="registration">
@@ -56,7 +56,7 @@
       <v-tab  to="sponsorship" ripple>
          <v-menu offset-y :nudge-bottom="12" :nudge-left="12" open-on-hover>
           <div slot="activator" color='light-blue accent-4'>
-            <span class="title">{{$t("sponsorship")}}</span>
+            <span class="title normal">{{$t("sponsorship")}}</span>
           </div>
           <v-list>
             <v-list-tile to="sponsorship">
@@ -69,7 +69,7 @@
         </v-menu>
       </v-tab>
       <v-tab to="associated-media" ripple>
-        <span class="title">{{$t('associatedMedia')}}</span>
+        <span class="title normal">{{$t('associatedMedia')}}</span>
         <!-- <v-menu offset-y :nudge-bottom="12" :nudge-left="12" open-on-hover>
           <div slot="activator" color='light-blue accent-4'>{{$t("about")}} </div>
           <v-list>
@@ -102,7 +102,26 @@ export default {
       }
     };
   },
-  computed: {},
+  computed: {
+    logoshow() {
+      let bp = this.$vuetify.breakpoint.name;
+      if(bp == 'xs' || bp == 'sm'){
+        return false
+      }
+      else{
+        return true
+      }
+    },
+    titleshow() {
+      let bp = this.$vuetify.breakpoint.name;
+      if(bp == 'xs' || bp == 'sm'){
+        return 'headline  black--text'
+      }
+      else{
+        return 'display-1  black--text'
+      }
+    }
+  },
   methods: {
     changeLang(lang) {
       // let l = this.lang;
@@ -111,7 +130,8 @@ export default {
       console.log(lang)
       this.$i18n.locale = lang;
     },
-    toAdvisoryBoard() {}
+    toAdvisoryBoard() {},
+
   }
 };
 </script>
@@ -145,6 +165,9 @@ export default {
 }
 .logo {
   height: 85px;
+}
+.normal {
+  text-transform: none
 }
 </style>
 

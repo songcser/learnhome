@@ -1,7 +1,7 @@
 <template>
   <v-container fluid grid-list-lg>
     <v-layout row wrap>
-      <v-flex xs8>
+      <v-flex xs12 md8>
         <div class="headline mt-5">{{$t('meeting.trendReport.name')}}</div>
         <v-divider class="my-3"></v-divider>
         <div class="text">{{$t('meeting.trendReport.text')}}</div>
@@ -15,7 +15,7 @@
         <v-divider class="my-3"></v-divider>
         <div class="text">{{$t('meeting.activeBuyers.text')}}</div>
       </v-flex>
-      <v-flex xs4>
+      <v-flex xs12 md4 hidden-xs-only>
         <app-aside />
       </v-flex>
     </v-layout>

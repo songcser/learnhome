@@ -5,7 +5,7 @@
     </v-carousel>
     <v-container fluid grid-list-lg>
       <v-layout row wrap>
-        <v-flex xs8>
+        <v-flex xs12 md8>
           <!-- <word-mask /> -->
           <v-layout row wrap class="mt-3">
             <v-flex xs6 md3>
@@ -25,7 +25,7 @@
                   <img :src="require('@/assets/list02.png')" width="160px" height="160px"/>
                 </div>
                 <div>
-                  <p>160</p>
+                  <p>150</p>
                   <p>{{$t('meeting.premiumPlayers')}}</p>
                 </div>
               </div>
@@ -37,7 +37,7 @@
                 </div>
                 <div>
                   <p>100</p>
-                  <p style="font-size: 18px">{{$t('meeting.oem')}}</p>
+                  <p style="font-size: 14px; ">{{$t('meeting.oem')}}</p>
                 </div>
               </div>
             </v-flex>
@@ -74,7 +74,7 @@
               <v-card elevation-24>
                 <v-card-media height="200px">
                   <v-progress-circular style="text-align: center" :size="200" :width="25" :rotate="-90" :value="timestart" color="primary">
-                    {{ $t('meeting.countdown') + ' ' + timetext + $t('meeting.day') }}
+                    {{ $t('meeting.countdown') + ' ' + timetext + ' ' + $t('meeting.day') }}
                   </v-progress-circular>
                 </v-card-media>
                 <v-card-title primary-title>
@@ -82,7 +82,7 @@
                   <vue-seamless-scroll :data="listData" class="seamless-warp">
                     <ul>
                       <li class="item" v-for="(item, index) in listData" :key="index">
-                        <img class="center" :src="item.src" height="100px" />
+                        <img class="center" :src="item.src" height="120px" />
                       </li>
                     </ul>
                   </vue-seamless-scroll>
@@ -91,7 +91,7 @@
             </v-flex>
           </v-layout>
         </v-flex>
-        <v-flex xs4>
+        <v-flex xs12 md4 hidden-xs-only>
           <app-aside />
         </v-flex>
       </v-layout>
@@ -235,11 +235,11 @@ export default {
 .list {
   background: none;
   border-right: 3px solid grey;
-  line-height: 20px;
+  line-height: 25px;
 }
 .listcontent {
-  height: 60px;
-  font-size: 20px;
+  height: 65px;
+  font-size: 18px;
   transition: transform 0.4s linear;
 }
 .listcontent:hover {
@@ -258,7 +258,7 @@ export default {
   box-shadow: none;
 }
 .seamless-warp {
-  height: 700px;
+  height: 900px;
   overflow: hidden;
 }
 .center {
@@ -279,7 +279,8 @@ export default {
 .icon-list div:nth-child(2) {
   position: absolute;
   top: 50px;
-  left: 30px;
+  left: 45px;
+  width: 100px;
 }
 .icon-list p {
   font-size: 18px;
@@ -287,6 +288,7 @@ export default {
   padding: 0;
   font-weight: bold;
   height: 30px;
+  text-align: center;
 }
 .list-tile {
   margin: 0 !important;

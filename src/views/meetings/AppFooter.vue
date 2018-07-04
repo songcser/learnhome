@@ -25,6 +25,10 @@
           </v-layout>
         </v-container>
       </v-card-text>
+      <v-card-actions class="grey darken-4 justify-center">
+        &copy;2018 —
+        <strong>沪ICP备18025092号</strong>
+      </v-card-actions>
     </v-card>
   </v-footer>
 </template>
@@ -32,10 +36,8 @@
 <script>
 export default {
   name: "app-footer",
-  data () {
-    return {
-
-    }
+  data() {
+    return {};
   }
 };
 </script>

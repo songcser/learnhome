@@ -1,94 +1,93 @@
 <template>
   <v-container fluid grid-list-lg>
     <v-layout row wrap>
-      <v-flex xs8>
-        <div class="headline mt-5">{{$t('meeting.delegates')}}</div>
-        <v-divider class="my-3"></v-divider>
-          <v-list>
-            <template  v-for="(item, index) in hangye">
-            <v-list-tile :key="index" class="progress-list">
-              <div class="progress-text">{{$t("hangye.text"+(index+1))}}</div>
-               <v-progress-linear :value="item.value" height="15" :color="item.color"></v-progress-linear>
-            </v-list-tile>
-            </template>
-          </v-list>
+      <v-flex xs12 md7>
         <div class="headline mt-5">{{$t('meeting.ga.name')}}</div>
         <v-divider class="my-3"></v-divider>
         <v-layout row wrap>
-          <v-flex xs12 sm6>
-            <v-list subheader two-line>
+          <v-flex xs12>
+            <v-list subheader>
               <template v-for="(item, index) in zhengfuxiehui">
-                <v-list-tile v-if="index%2 == 0" :key="index">
+                <v-list-tile :key="index">
                   <v-list-tile-action>
                     <v-icon>send</v-icon>
                   </v-list-tile-action>
                   <v-list-tile-content class="hotlight">
-                    {{$t('meeting.ga.l' + index)}}
-                  </v-list-tile-content>
-                </v-list-tile>
-              </template>
-            </v-list>
-          </v-flex>
-          <v-flex xs12 sm6>
-            <v-list subheader two-line>
-              <template v-for="(item, index) in zhengfuxiehui">
-                <v-list-tile v-if="index%2 == 1" :key="index">
-                  <v-list-tile-action>
-                    <v-icon>send</v-icon>
-                  </v-list-tile-action>
-                  <v-list-tile-content class="hotlight">
-                    {{$t('meeting.ga.l' + index)}}
+                    <p class="text">{{$t('meeting.ga.l' + index)}}</p>
                   </v-list-tile-content>
                 </v-list-tile>
               </template>
             </v-list>
           </v-flex>
         </v-layout>
-        <div class="headline mt-5">行业领袖</div>
+        <div class="headline mt-3">{{$t('meeting.delegates')}}</div>
+        <v-divider class="my-3"></v-divider>
+        <v-list>
+          <template v-for="(item, index) in hangye">
+            <v-list-tile :key="index" class="progress-list">
+              <div class="progress-text">{{$t("hangye.text"+(index+1))}}</div>
+              <v-progress-linear :value="item.value" height="15" :color="item.color"></v-progress-linear>
+            </v-list-tile>
+          </template>
+        </v-list>
+        <!-- <div class="headline mt-5">{{$t('meeting.byJobTitle.name')}}</div>
         <v-divider class="my-3"></v-divider>
         <v-layout row wrap>
           <v-flex xs12 sm6>
             <v-list subheader>
-              <template v-for="(item, index) in hangyelingxiu">
+              <template v-for="(item, index) in byJobTitle">
                 <v-list-tile v-if="index%2 == 0" :key="index">
                   <v-list-tile-action>
                     <v-icon>send</v-icon>
                   </v-list-tile-action>
                   <v-list-tile-content class="hotlight">
-                    {{item}}
+                    {{$t('meeting.byJobTitle.l' + index)}}
                   </v-list-tile-content>
                 </v-list-tile>
               </template>
             </v-list>
-          </v-flex>
-          <v-flex xs12 sm6>
+          </v-flex> -->
+        <!-- <v-flex xs12 sm6>
             <v-list subheader>
-              <template v-for="(item, index) in hangyelingxiu">
+              <template v-for="(item, index) in byJobTitle">
                 <v-list-tile v-if="index%2 == 1" :key="index">
                   <v-list-tile-action>
                     <v-icon>send</v-icon>
                   </v-list-tile-action>
                   <v-list-tile-content class="hotlight">
-                    {{item}}
+                    {{$t('meeting.byJobTitle.l' + index)}}
                   </v-list-tile-content>
                 </v-list-tile>
               </template>
             </v-list>
-          </v-flex>
-        </v-layout>
+          </v-flex> -->
+        <!-- </v-layout> -->
       </v-flex>
-      <v-flex xs4>
-        <app-aside />
+      <v-flex xs12 md5>
+        <div class="headline mt-5">{{$t('meeting.industryLeaders.name')}}</div>
+        <v-divider class="my-3"></v-divider>
+        <v-list subheader>
+          <template v-for="(item, index) in hangyelingxiu">
+            <v-list-tile :key="index">
+              <v-list-tile-action>
+                <v-icon>send</v-icon>
+              </v-list-tile-action>
+              <v-list-tile-content class="hotlight">
+                {{$t('meeting.industryLeaders.l' + index)}}
+              </v-list-tile-content>
+            </v-list-tile>
+          </template>
+        </v-list>
       </v-flex>
     </v-layout>
   </v-container>
 </template>
 <script>
-import AppAside from '@/views/meetings/AppAside'
+import AppAside from "@/views/meetings/AppAside";
 export default {
   name: "participant",
   components: {
-    AppAside,
+    AppAside
   },
   data() {
     return {
@@ -127,87 +126,88 @@ export default {
         "博世",
         "罗兰贝格"
       ],
+      byJobTitle: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
       hangye: [
         {
-          text: '政府以及行业规则制定者',
+          text: "政府以及行业规则制定者",
           value: 10,
-          color: 'success'
+          color: "success"
         },
         {
-          text: '发动机制造商',
+          text: "发动机制造商",
           value: 50,
-          color: 'warning'
+          color: "warning"
         },
         {
-          text: '发动机零部件供应商',
+          text: "发动机零部件供应商",
           value: 85,
-          color: 'error'
+          color: "error"
         },
         {
-          text: '汽车制造商',
+          text: "汽车制造商",
           value: 30,
-          color: 'info'
+          color: "info"
         },
         {
-          text: '商用车制造商',
+          text: "商用车制造商",
           value: 70,
-          color: 'error'
+          color: "error"
         },
         {
-          text: '非公路移动机械制造商',
+          text: "非公路移动机械制造商",
           value: 65,
-          color: 'error'
+          color: "error"
         },
         {
-          text: '后处理系统&部件供应商',
+          text: "后处理系统&部件供应商",
           value: 40,
-          color: 'info'
+          color: "info"
         },
         {
-          text: '车用尿素供应商',
+          text: "车用尿素供应商",
           value: 10,
-          color: 'success'
+          color: "success"
         },
         {
-          text: '柴油供应商',
+          text: "柴油供应商",
           value: 20,
-          color: 'info'
+          color: "info"
         },
         {
-          text: '润滑油供应商',
+          text: "润滑油供应商",
           value: 20,
-          color: 'info'
+          color: "info"
         },
         {
-          text: '动力总成制造商',
+          text: "动力总成制造商",
           value: 62,
-          color: 'warning'
+          color: "warning"
         },
         {
-          text: '技术系统方案供应商',
+          text: "技术系统方案供应商",
           value: 45,
-          color: 'info'
+          color: "info"
         },
         {
-          text: '发动机技术供应商',
+          text: "发动机技术供应商",
           value: 58,
-          color: 'warning'
+          color: "warning"
         },
         {
-          text: '催化剂供应商',
+          text: "催化剂供应商",
           value: 10,
-          color: 'success'
+          color: "success"
         },
         {
-          text: '咨询机构',
+          text: "咨询机构",
           value: 5,
-          color: 'secondary'
+          color: "secondary"
         },
         {
-          text: '科研院所',
+          text: "科研院所",
           value: 5,
-          color: 'secondary'
-        },
+          color: "secondary"
+        }
       ]
     };
   }
@@ -216,10 +216,10 @@ export default {
 <style scoped>
 .list {
   background: none;
-  line-height:18px;
+  line-height: 25px;
 }
 .hotlight {
-  height: 75px;
+  height: 70px;
   font-size: 20px;
   transition: transform 0.4s linear;
 }
@@ -249,5 +249,9 @@ export default {
   -webkit-transform: translateX(10px);
   -o-transform: translateX(10px);
   -ms-transform: translateX(10px);
+}
+.text {
+  line-height: 20px;
+  margin: 0;
 }
 </style>
