@@ -41,6 +41,24 @@
               </v-card-title>
             </v-card>
           </v-flex>
+          <v-flex xs12 sm4>
+            <v-card class="elevation-12" height="280px">
+               <v-card-title primary-title>
+                <a class="headline" href='http://www.sohu.com/a/234014174_372603' target='_blank'>国六、轻量化，2018年各家柴油机新品你必须知道</a>
+                <div class="subheader">2018-06-04</div>
+                <div class="text">市场决定导向，用户决定需求。这句话用在商用车领域再合适不过了。随着新法规的实施和排放升级脚步的加快，商用车市场发生了巨大变化。在最近行业提及最多的几个关键词如国六、大马力和轻量化等方面，各发动机企业已经做好相关产品和技术储备以满足市场需求。</div>
+              </v-card-title>
+            </v-card>
+          </v-flex>
+          <v-flex xs12 sm4>
+            <v-card class="elevation-12" height="280px">
+               <v-card-title primary-title>
+                <a class="title" href='https://www.enginetechnologyinternational.com/opinion/mark-gostick-ic-future.html' target='_blank'>Mark Gostick, COO of Camcon Automotive, on the future of the IC engine</a>
+                <div class="subheader">2018-06-04</div>
+                <div class="text">Whether it’s from the government or the mainstream press, attacks on the internal combustion engine are coming thick and fast. Believe the noise and you could be forgiven for thinking we’ll all be driving electric cars by 2020, with fossil fuel power consigned to history</div>
+              </v-card-title>
+            </v-card>
+          </v-flex>
         </v-layout>
       </v-flex>
       <v-flex xs12 md4 hidden-xs-only>
