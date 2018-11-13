@@ -50,6 +50,9 @@
             <v-list-tile to="register">
               <v-list-tile-sub-title>{{$t("register")}}</v-list-tile-sub-title>
             </v-list-tile>
+            <v-list-tile to="signup">
+              <v-list-tile-sub-title>{{$t("signup")}}</v-list-tile-sub-title>
+            </v-list-tile>
           </v-list>
         </v-menu>
       </v-tab>

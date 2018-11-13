@@ -72,8 +72,8 @@
             </v-flex>
             <v-flex xs12 sm4>
               <v-card elevation-24>
-                <v-card-media height="200px">
-                  <v-progress-circular style="text-align: center" :size="200" :width="25" :rotate="-90" :value="timestart" color="primary">
+                <v-card-media height="250px">
+                  <v-progress-circular style="text-align: center" :size="250" :width="25" :rotate="-90" :value="timestart" color="primary">
                     {{ $t('meeting.countdown') + ' ' + timetext + ' ' + $t('meeting.day') }}
                   </v-progress-circular>
                 </v-card-media>
@@ -82,7 +82,7 @@
                   <vue-seamless-scroll :data="listData" class="seamless-warp">
                     <ul>
                       <li class="item" v-for="(item, index) in listData" :key="index">
-                        <img class="center" :src="item.src" height="120px" />
+                        <img class="center" :src="item.src" height="130px" />
                       </li>
                     </ul>
                   </vue-seamless-scroll>
@@ -154,6 +154,9 @@ export default {
         this.$t("liangdians.l19"),
         this.$t("liangdians.l20"),
         this.$t("liangdians.l21"),
+        this.$t("liangdians.l22"),
+        this.$t("liangdians.l23"),
+        this.$t("liangdians.l24"),
       ],
       beiying1: require("@/assets/5a02.jpg"),
       beiying2: require("@/assets/a75d.jpg"),
@@ -192,15 +195,6 @@ export default {
         },
         {
           src: require("@/assets/xianchang/11.jpg")
-        },
-        {
-          src: require("@/assets/xianchang/12.jpg")
-        },
-        {
-          src: require("@/assets/xianchang/13.jpg")
-        },
-        {
-          src: require("@/assets/xianchang/14.jpg")
         }
       ]
     };
@@ -211,7 +205,7 @@ export default {
   computed: {
     timetext () {
       let now = new Date()
-      let dt = new Date(2019, 4, 10)
+      let dt = new Date(2019, 3, 27)
       let intervalMsec = dt - Date.now()
       let day = parseInt(intervalMsec / 1000 / 3600 / 24)
       return day
@@ -258,7 +252,7 @@ export default {
   box-shadow: none;
 }
 .seamless-warp {
-  height: 900px;
+  height: 1350px;
   overflow: hidden;
 }
 .center {

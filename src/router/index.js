@@ -15,6 +15,7 @@ import MeetingSponsorshipOpportunity from "@/views/meetings/SponsorshipOpportuni
 import MeetingFdes from "@/views/meetings/Fdes";
 import MeetingAssociatedMedia from "@/views/meetings/AssociatedMedia";
 import MeetingOem from "@/views/meetings/Oem";
+import MeetingSignup from "@/views/meetings/Signup";
 
 Vue.use(VueRouter);
 
@@ -83,6 +84,10 @@ const router = new VueRouter({
         {
           path: "oem",
           component: MeetingOem
+        },
+        {
+          path: "signup",
+          component: MeetingSignup
         }
       ]
     }
